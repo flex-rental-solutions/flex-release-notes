@@ -30,3 +30,4 @@ GitHub raw URLs work in the browser — CORS is not an issue
 - Reliability — This ties our release notes to GitHub's uptime. Probably fine, but worth acknowledging.
 - Who owns updates? — Is this a dev workflow or can non-devs manage it?
 - What about geographical deploys? Release Notes would show everywhere by default unless there was a way to accomodate that.
+- Is it cool to have release note files public? Probably fine, but worth thinking about if there are any downsides to that.
