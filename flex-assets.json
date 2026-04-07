@@ -1,0 +1,837 @@
+[
+  {
+    "version": "1.11.0",
+    "date": "2026-03-18",
+    "notes": [
+      "Implemented \"Log Maintenance\" button on the Maintenance Due page.",
+      "Adjusted the inventory model popup to group fields into sections and refined structure/availability settings."
+    ]
+  },
+  {
+    "version": "1.10.0",
+    "date": "2026-03-12",
+    "notes": []
+  },
+  {
+    "version": "1.9.0",
+    "date": "2026-03-05",
+    "notes": []
+  },
+  {
+    "version": "1.8.0",
+    "date": "2026-02-25",
+    "notes": [
+      "Implemented an \"Include Hidden\" filter to the search browser, allowing users to include or exclude hidden inventory items."
+    ]
+  },
+  {
+    "version": "1.7.0",
+    "date": "2026-02-14",
+    "notes": []
+  },
+  {
+    "version": "1.6.0",
+    "date": "2026-02-05",
+    "notes": []
+  },
+  {
+    "version": "1.5.0",
+    "date": "2026-01-27",
+    "notes": [
+        "Implemented Welcome popup with Help Center search capability for Flex trial users."
+    ]
+  },
+  {
+    "version": "1.4.0",
+    "date": "2026-01-08",
+    "notes": []
+  },
+  {
+    "version": "1.3.0",
+    "date": "2025-11-20",
+    "notes": []
+  },
+  {
+    "version": "1.2.0",
+    "date": "2025-10-30",
+    "notes": []
+  },
+  {
+    "version": "1.1.0",
+    "date": "2025-10-09",
+    "notes": []
+  },
+  {
+    "version": "1.0.0",
+    "date": "2025-09-18",
+    "notes": [
+      "Implemented a new global report named Non-Serialized Model Quantity Report.",
+      "Fix for an issue that caused addresses in Contact Manager to not export properly."
+    ]
+  },
+  {
+    "version": "0.27.120",
+    "date": "2025-08-28",
+    "notes": []
+  },
+  {
+    "version": "0.27.119",
+    "date": "2025-08-12",
+    "notes": [
+      "Internal version alignment."
+    ]
+  },
+  {
+    "version": "0.27.118",
+    "date": "2025-08-11",
+    "notes": [
+      "Implemented ability to reopen recently closed tabs.",
+      "Implemented change in browser refresh to keep all open tabs after refresh.",
+      "Implemented “Workflow Usage” in Projects > Workflow.",
+      "Implemented “Go to Workflow Jobs” button in Projects > Workflow.",
+      "Implemented “Go to Workflow” button in Projects > Workflow Jobs.",
+      "Implemented “Workflow Job Usage” in Projects > Workflow Jobs.",
+      "Implemented a “Jobs” column in Projects > Workflow with hyperlinks to each job in the tooltip.",
+      "Fix for an issue that caused some workflow jobs to populate in inconsistent order."
+    ]
+  },
+  {
+    "version": "0.27.117",
+    "date": "2025-07-24",
+    "notes": [
+      "Implemented the Top Maintenance Procedures maintenance logistics dashlet.",
+      "Implemented the Maintenance by Inventory Model maintenance logistics dashlet.",
+      "Adjusted the Dashboards “Inventory Group” filter to support multiple, or all, selections.",
+      "Fix for an issue that caused an error when selecting multiple options in “Group” column filter.",
+      "Fix for an issue that caused the start and end date Time value to not populate when element is closed or locked."
+    ]
+  },
+  {
+    "version": "0.27.116",
+    "date": "2025-07-03",
+    "notes": [
+      "Implemented Maintenance Logistics tab on Dashboards page.",
+      "Implemented Maintenance Due in the Inventory Menu.",
+      "Implemented Maintenance History in the Inventory Menu.",
+      "Implemented OOC History in the Inventory Menu.",
+      "Implemented a Service Location field to maintenance log records (defaults to the last location it was journaled in to).",
+      "Adjusted the OOC Logistics dashlets to support interactivity, allowing you to click and explore detailed data."
+    ]
+  },
+  {
+    "version": "0.27.115",
+    "date": "2025-06-12",
+    "notes": [
+      "Implemented new columns in the <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/17182575193495-Scan-History\" target=\"_blank\" rel=\"noopener noreferrer\">Scan History</a> page – Group and Scan Source columns.",
+      "Implemented the OOC Logistics tab in Dashboards page.",
+      "Implemented the Scanning Logistics tab in Dashboards page.",
+      "Adjusted the Scan History grid permission to Can View Inventory."
+    ]
+  },
+  {
+    "version": "0.27.114",
+    "date": "2025-05-22",
+    "notes": [
+      "Implemented Email Workflow Jobs API.",
+      "Implemented \"Email Me…\" API."
+    ]
+  },
+  {
+  "version": "0.27.113",
+  "date": "2025-05-08",
+  "notes": [
+    "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/31565327017111-Send-User-Invitation-Email\" target=\"_blank\" rel=\"noopener noreferrer\">user invitation functionality</a> (via User popup).",
+    "Implemented the ability to <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/31592083710871-Default-Home-View\" target=\"_blank\" rel=\"noopener noreferrer\">set a default Home view.</a>",
+    "Implemented various help center links within the header of popups.",
+    "Implemented a file attachment field within Contact Flex Support form. ",
+    "Implemented additional tooltips for fields within Element Definitions.",
+    "Adjusted the fields within the New/Edit User popup and added collapsible sections.",
+    "Removed the Help option from the Main Menu (now located within the Resource Browser)."
+  ]
+},
+  {
+    "version": "Add New Corporate Identities",
+    "date": "2025-04-16",
+    "notes": [
+      "Implemented new functionality that allows Admin users to create new corporate identities."
+    ]
+  },
+  {
+    "version": "0.27.112",
+    "date": "2025-04-10",
+    "notes": [
+      "Implemented the ability to <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/31113410469783-Quick-Links\" target=\"_blank\" rel=\"noopener noreferrer\">edit Quick Links</a> (available for System Admins).",
+      "Implemented the ability to mark multiple lines as presumed missing or manually returned in the Past Due tab.",
+      "Implemented a Contact Flex Support form in-app under the ? icon.",
+      "Implemented a search bar within Element Definitions.",
+      "Implemented the ability for users to upload an icon from the Element Definitions Icon field.",
+      "Adjusted the Past Due \"Due Back\" filter default to \"Last 30 Days\"."
+    ]
+  },
+  {
+    "version": "0.27.111",
+    "date": "2025-03-20",
+    "notes": [
+      "Implemented new Flex Add-Ons link to the ? icon for awareness of additional Flex features.",
+      "Implemented an interactive text editor for Terms and Conditions.",
+      "Implemented the ability to select all permissions within a section.",
+      "Implemented a search field to the Permissions popup.",
+      "Implemented tooltips across Element Definitions on General Settings, Numbering, and Dates & Times tabs.",
+      "Adjusted Help sections, streamlining information by moving links down from the Main Menu to the ? icon in the bottom left."
+    ]
+  },
+  {
+    "version": "0.27.110",
+    "date": "2025-02-27",
+    "notes": [
+      "Fix for an issue where manually adjusting on-hand quantity to \"0\" did not save.",
+      "Removed the ability to sort columns within the Scan Log page."
+    ]
+  },
+  {
+    "version": "0.27.109",
+    "date": "2025-02-06",
+    "notes": [
+      "Implemented a link to the Status Page in the Help menu.",
+      "Adjusted the Past Due tab to not include lines with an \"Outgoing\" resource type (ie Retail)."
+    ]
+  },
+  {
+    "version": "0.27.108",
+    "date": "2025-01-16",
+    "notes": [
+      "Implemented a \"…\" menu in the Past Due tab."
+    ]
+  },
+  {
+    "version": "0.27.107",
+    "date": "2024-12-12",
+    "notes": []
+  },
+  {
+    "version": "0.27.106",
+    "date": "2024-11-21",
+    "notes": []
+  },
+  {
+    "version": "0.27.105",
+    "date": "2024-10-23",
+    "notes": [
+      "Adjusted the name of \"Sensitive Field Types\" to \"Sensitive Search Fields.\"",
+      "Fix for an issue that did not allow deleting phone numbers in business locations."
+    ]
+  },
+  {
+    "version": "0.27.104",
+    "date": "2024-10-10",
+    "notes": [
+      "Implemented the ability to delete a Scheduled Inventory Count that is in progress."
+    ]
+  },
+  {
+    "version": "0.27.103",
+    "date": "2024-09-19",
+    "notes": []
+  },
+  {
+    "version": "0.27.102",
+    "date": "2024-08-29",
+    "notes": [
+      "Implemented a <a href=\"https://helpcenter.flexrentalsolutions.com/hc/en-us/articles/25698006638615\" target=\"_blank\" rel=\"noopener noreferrer\">search field within the Main Menu.</a>"
+    ]
+  },
+  {
+    "version": "0.27.101",
+    "date": "2024-08-08",
+    "notes": [
+      "Fix for an issue that caused an error when executing a workflow action with an executor group set."
+    ],
+    "announcement": "<a href=\"https://www.eventbrite.com/e/uk-power-user-session-tickets-946806241957?aff=oddtdtcreator&utm_campaign=UK+User+Training&utm_medium=email&utm_source=hs_email\" target=\"_blank\" rel=\"noopener noreferrer\">Click here to register for our UK Power User Session in London! (August 30)</a>"
+  },
+  {
+    "version": "0.27.100",
+    "date": "2024-07-18",
+    "notes": []
+  },
+  {
+    "version": "0.27.99",
+    "date": "2024-06-27",
+    "notes": [
+      "Adjusted various grids to allow selecting checkboxes across multiple pages.",
+      "Fix for various issues when exporting the Contact Manager."
+    ]
+  },
+  {
+    "version": "0.27.98",
+    "date": "2024-06-06",
+    "notes": [
+      "Implemented a \"Reply To\" and \"From Address Name\" field in Email Workflow Jobs.",
+      "Implemented a tooltip for truncated column names in grids.",
+      "Implemented an RFID Tag column in the Inventory Manager when \"include serial units\" is selected.",
+      "Fix for an issue that caused the inventory tree to become inactive after rearranging items and folders."
+    ],
+    "announcement": "<a href=\"https://www.eventbrite.com/e/vegas-user-training-2024-tickets-888500899107\" target=\"_blank\" rel=\"noopener noreferrer\">Click here to register for our User Training in Las Vegas! (June 10-11)</a>"
+  },
+  {
+    "version": "0.27.97",
+    "date": "2024-05-16",
+    "notes": [
+      "Adjusted the name of the workflow action's Confirm Screen Enabled popup.",
+      "Fix for an issue in Safari that caused text areas to populate as the wrong size."
+    ],
+    "announcement": "<a href=\"https://www.eventbrite.com/e/vegas-user-training-2024-tickets-888500899107\" target=\"_blank\" rel=\"noopener noreferrer\">Click here to register for our User Training in Las Vegas! (June 10-11)</a>"
+  },
+  {
+    "version": "0.27.96",
+    "date": "2024-04-25",
+    "notes": [
+      "Implemented the \"option list\" custom field in the Calendar list view."
+    ]
+  },
+  {
+    "version": "0.27.95",
+    "date": "2024-04-04",
+    "notes": [
+      "Adjusted the Assets Receipt report to include non-serialized inventory models.",
+      "Fix for an issue that displayed OOC units in original location after being transferred."
+    ]
+  },
+  {
+    "version": "0.27.94",
+    "date": "2024-03-14",
+    "notes": [
+      "Implemented the ability to drag and drop from the Inventory/Search Browser to scanning screen.",
+      "Implemented Tags for contacts and companies.",
+      "Fix for an issue that did not provide the \"Generate Report\" option on the reports menu."
+    ]
+  },
+  {
+    "version": "0.27.93",
+    "date": "2024-02-22",
+    "notes": [
+        "Fix for an issue that caused an error after a browser refresh."
+    ]
+  },
+  {
+    "version": "0.27.92",
+    "date": "2024-02-01",
+    "notes": [
+      "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/20833397231639\" target=\"_blank\" rel=\"noopener noreferrer\">Single Sender Email</a> to meet new email requirements from Google & Yahoo.",
+      "Fix for an issue that did not allow deleting lines off of File Lists (i.e. Documents).",
+      "Fix for an issue that allowed users to see the Inventory Browser icon when Can View Inventory permission is denied.",
+      "Moved the inventory model Audit Trail page to the Can Manage Inventory permission."
+    ]
+  },
+  {
+    "version": "0.27.91",
+    "date": "2024-01-11",
+    "notes": [
+      "Fix for an issue that caused the Business Location field type to populate the old name after being adjusted."
+    ]
+  },
+  {
+    "version": "0.27.90",
+    "date": "2023-12-07",
+    "notes": [
+      "Implemented format mask options to Field Types in \"email\" Workflow Jobs.",
+      "Adjusted the behavior after a Status Option is created to auto-launch the Configure Element's popup.",
+      "Fix for an issue that did not allow deleting of a workflow state."
+    ]
+  },
+  {
+    "version": "0.27.89",
+    "date": "2023-11-16",
+    "notes": [
+      "Implemented the ability to set inventory models as expendable.",
+      "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/18795717418519#h_01HC0RGF6YRBD7QJ33A46YCBX2\" target=\"_blank\" rel=\"noopener noreferrer\">Forgot Password</a> functionality.",
+      "Implemented the ability to drag and drop from the Recent History browser.",
+      "Adjusted the icon for services within the Services browser.",
+      "Fix for an issue that caused the model's size to not appear in recent history.",
+      "Fix for an issue that caused custom reports generated in EXCEL to not open."
+    ]
+  },
+  {
+    "version": "0.27.88",
+    "date": "2023-10-31",
+    "notes": [
+      "Implemented Help > About Flex5 version popup.",
+      "Fix for an issue that allowed merging of companies into a contact."
+    ]
+  },
+  {
+    "version": "0.27.87",
+    "date": "2023-10-05",
+    "notes": [
+      "Implemented an email preview for the \"Email Notification w/Report\" Workflow Job type."
+    ]
+  },
+  {
+    "version": "0.27.86",
+    "date": "2023-09-14",
+    "notes": [
+      "Implemented Inventory > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/17182575193495\" target=\"_blank\" rel=\"noopener noreferrer\">Scan History</a> grid.",
+      "Fix for an issue that caused the inventory tree configuration page to become unresponsive after rearranging items.",
+      "Fix for an issue that did not allow child inventory groups to be deleted."
+    ]
+  },
+  {
+    "version": "0.27.85",
+    "date": "2023-08-24",
+    "notes": [
+      "Implemented System <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/16639260705175\" target=\"_blank\" rel=\"noopener noreferrer\">Settings > Tags</a>.",
+      "Implemented Tags for inventory models.",
+      "Implemented Tags column in inventory worksheet.",
+      "Implemented a warning prompt when adjusting the numbering sequence.",
+      "Implemented a Report Level option in custom report settings.",
+      "Fix for an issue that caused the Authorized Groups on custom reports to not save."
+    ],
+    "announcement": "<a href=\"https://www.eventbrite.com/e/uk-user-training-tickets-692567527117?aff=oddtdtcreator\" target=\"_blank\" rel=\"noopener noreferrer\">Click here to register for our UK User Training in London!</a>"
+  },
+  {
+    "version": "0.27.84",
+    "date": "2023-08-03",
+    "notes": [
+      "Implemented a right-click menu on inventory models in the search browser.",
+      "Implemented a refresh icon in the inventory model's Quantity tab.",
+      "Adjusted the behavior when undeleting an inventory model to remove the DELETED suffix from the barcode."
+    ]
+  },
+  {
+    "version": "0.27.83",
+    "date": "2023-07-13",
+    "notes": [
+      "Implemented Bin Locations in the Inventory Worksheet (as a View Option).",
+      "Implemented an \"Undo\" option in the deleted toaster for resources."
+    ]
+  },
+  {
+    "version": "0.27.82",
+    "date": "2023-06-22",
+    "notes": [
+      "Implemented Microsoft Sign On as a login option on the landing page."
+    ]
+  },
+  {
+    "version": "0.27.81",
+    "date": "2023-06-01",
+    "notes": [
+      "Implemented custom field \"Options List\" in search options."
+    ]
+  },
+  {
+    "version": "0.27.80",
+    "date": "2023-05-11",
+    "notes": [
+      "Implemented the ability to set Field Settings as required.",
+      "Implemented System Settings > Images.",
+      "Implemented a link to the Flex Billing Portal in the Help menu."
+    ]
+  },
+  {
+    "version": "0.27.79",
+    "date": "2023-04-20",
+    "notes": [
+      "Implemented the ability to clone element definitions.",
+      "Fix for an issue that allowed a user with the \"can browse & search hidden items\" permission denied to be able to view hidden items in the inventory manager.",
+      "Fix for an issue that caused the serial unit image to be cut off.",
+      "Fix for an issue that caused the \"copy image link\" to not display."
+    ]
+  },
+  {
+    "version": "0.27.78",
+    "date": "2023-03-30",
+    "notes": [
+      "Implemented the ability to mark serial units as OOC in bulk (via the Serial Units tab of an inventory model).",
+      "Adjusted the corporate identity \"parent entity\" field to only allow one to be selected as \"yes\".",
+      "Fix for an issue that caused disabled automated functions to still send.",
+      "Fix for an issue that did not apply company information when editing a contact record."
+    ]
+  },
+  {
+    "version": "0.27.77",
+    "date": "2023-03-09",
+    "notes": [
+      "Implemented System Settings > Backup History.",
+      "Implemented the \"run custom report\" settings within System Settings > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/12780464199831\" target=\"_blank\" rel=\"noopener noreferrer\">Automated Functions</a>.",
+      "Fix for an issue that allowed users to change password from the user profile menu when \"can change password\" was denied.",
+      "Fix for an issue that did not allow contact notes/tasks to be undeleted."
+    ]
+  },
+  {
+    "version": "0.27.76",
+    "date": "2023-02-16",
+    "notes": [
+      "Implemented the ability to <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/12273685369367\" target=\"_blank\" rel=\"noopener noreferrer\">merge duplicate contacts</a>.",
+      "Implemented the \"Birthday\" field for contacts.",
+      "Implemented Sign In with Google on the Renew Session screen.",
+      "Fix for an issue that caused the cogwheel to be present in unsupported areas of the resource browser."
+    ]
+  },
+  {
+    "version": "0.27.75",
+    "date": "2023-01-26",
+    "notes": [
+      "Implemented the \"clear\" icon for element custom fields.",
+      "Implemented the \"Currency Enabled\" field in the General Settings tab.",
+      "Fix for an issue that caused edited chained child actions to be removed from workflow actions.",
+      "Fix for an issue that did not allow values to be saved in authorized groups within the custom report popup.",
+      "Fix for an issue that did not support the \"None\" option in the change to type and chained parent action fields within the workflow action popup."
+    ]
+  },
+  {
+    "version": "0.27.74",
+    "date": "2023-01-06",
+    "notes": [
+      "Implemented the \"Copy Whole Tree\" option in the Create Copy popup.",
+      "Implemented the \"ASSIGNED\" special code in email workflow jobs.",
+      "Implemented the BCC field within the Email Notification w/Report workflow job.",
+      "Fix for an issue that caused a new Security Group to not save."
+    ]
+  },
+  {
+    "version": "0.27.73",
+    "date": "2022-12-15",
+    "notes": [
+      "Implemented Projects > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/10755538726295\" target=\"_blank\" rel=\"noopener noreferrer\">Workflow Jobs</a>.",
+      "Fix for an issue that caused Aggregation reports to not load in the Reports menu.",
+      "Adjusted the \"Send Feedback\" button to direct users to the Help Center."
+    ]
+  },
+  {
+    "version": "0.27.72",
+    "date": "2022-11-22",
+    "notes": [
+      "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/8374102287895\" target=\"_blank\" rel=\"noopener noreferrer\">Element Definitions</a> > Search Options.",
+      "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/10243778362135\" target=\"_blank\" rel=\"noopener noreferrer\">Google Sign-In</a> as a login option on the landing page.",
+      "Fix for an issue that caused values to not save in the edit popup when viewing the details of a workflow."
+    ]
+  },
+  {
+    "version": "0.27.71",
+    "date": "2022-11-03",
+    "notes": [
+      "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/8374102287895\" target=\"_blank\" rel=\"noopener noreferrer\">Element Definitions</a> > Custom Fields tab.",
+      "Implemented Projects > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/9759836580375\" target=\"_blank\" rel=\"noopener noreferrer\">Workflow</a>.",
+      "Implemented Contacts > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/9760341702295\" target=\"_blank\" rel=\"noopener noreferrer\">Contact Types</a>.",
+      "Implemented the ability to add and edit <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/9760599521815\" target=\"_blank\" rel=\"noopener noreferrer\">Cheat Sheets</a>.",
+      "Implemented the ability to mark element Custom Fields as required."
+    ]
+  },
+  {
+    "version": "0.27.70",
+    "date": "2022-10-13",
+    "notes": [
+      "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/8374102287895\" target=\"_blank\" rel=\"noopener noreferrer\">Element Definitions</a> > Contact Associations, Security, and Dates & Times tabs.",
+      "Implemented the Audit Trail for <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/360061606274#h_416647597841540699783478\" target=\"_blank\" rel=\"noopener noreferrer\">inventory models</a> and <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/1500003586762#h_416647597841540699783478\" target=\"_blank\" rel=\"noopener noreferrer\">serial units</a>.",
+      "Implemented System Settings > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/8680575473815\" target=\"_blank\" rel=\"noopener noreferrer\">Report Groups</a>.",
+      "Implemented \"Configure Report Groups\" option in the Reports menu.",
+      "Implemented adding and editing <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/9327375199767\" target=\"_blank\" rel=\"noopener noreferrer\">Static Reports</a> in the Reports menu.",
+      "Implemented adding and editing <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/9327331300247\" target=\"_blank\" rel=\"noopener noreferrer\">Custom Reports</a> in the Reports menu.",
+      "Implemented the \"Configure Parameters\" option within Custom Reports \"...\" menu.",
+      "Implemented the \"Show Only\" filter within the Reports menu."
+    ]
+  },
+  {
+    "version": "0.27.69",
+    "date": "2022-09-22",
+    "notes": [
+      "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/8374102287895\" target=\"_blank\" rel=\"noopener noreferrer\">Element Definitions</a> > Status Options, Child Elements, and Report tabs."
+    ]
+  },
+  {
+    "version": "0.27.68",
+    "date": "2022-09-01",
+    "notes": [
+      "Implemented System Settings > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/8374071523223\", target=\"_blank\" rel=\"noopener noreferrer\">Sound Themes</a>.",
+      "Implemented Projects > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/8374102287895\", target=\"_blank\" rel=\"noopener noreferrer\">Element Definitions.</a>",
+      "Implemented Element Definitions > General Settings, Field Settings, and Numbering tabs.",
+      "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/8374090190103\", target=\"_blank\" rel=\"noopener noreferrer\">Report Preferences</a> on the Reports menu.",
+      "Implemented the ability to download report codes on the Reports menu."
+    ]
+  },
+  {
+    "version": "0.27.67",
+    "date": "2022-08-11",
+    "notes": [
+      "Implemented System Settings > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/7894399126423\", target=\"_blank\" rel=\"noopener noreferrer\">Sound Clips</a>.",
+      "Implemented the Assigned Number field for contacts."
+    ]
+  },
+  {
+    "version": "0.27.65",
+    "date": "2022-06-30",
+    "notes": [
+      "Restricted the ability to enter \"<\" or \">\" within the inventory group Name field.",
+      "Adjusted the \"Include\" filter option in the Serial Units tab of an inventory model."
+    ]
+  },
+  {
+    "version": "0.27.64",
+    "date": "2022-06-09",
+    "notes": [
+      "Implemented System Settings > Units of Measure."
+    ]
+  },
+  {
+    "version": "0.27.63",
+    "date": "2022-05-19",
+    "notes": [
+      "Implemented Inventory > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/5972941698967-Inventory-Settings\", target=\"_blank\" rel=\"noopener noreferrer\">Inventory Settings</a>.",
+      "Implemented System Settings > Numbering Schemes.",
+      "Implemented the \"Background\" and \"Text\" color selector in element's new/edit popup.",
+      "Adjusted the \"Due Back\" date to highlight in red when the date is in the past.",
+      "Adjusted the Inventory Dashboard for non-serialized items to not include Free Scan Out field.",
+      "Fix for an issue that caused the Inventory Dashboard to display OOC quantities in other location's \"still out\" calculation.",
+      "Fix for an issue that did not update the inventory model's \"preset\" when adjusting the structure fields."
+    ]
+  },
+  {
+    "version": "0.27.62",
+    "date": "2022-04-28",
+    "notes": [
+      "Implemented \"Inventory Count Groups\" scanning functionality for <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/4418147270807-Scheduled-Inventory-Counts\", target=\"_blank\" rel=\"noopener noreferrer\">Scheduled Inventory Counts</a>.",
+      "Implemented the \"Home Location Warning\" when the scanning location does not match the unit's home base location.",
+      "Fix for an issue that caused the business location time to always display as \"GMT (+0000)\".",
+      "Adjusted the element’s <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/4403131512343-Task-Elements\", target=\"_blank\" rel=\"noopener noreferrer\">\"Notifications\"</a> tab and implemented the ability to mark notes as read/unread (previously the “Notes” tab).",
+      "Adjusted the Flex logo on the login and loading screens."
+    ]
+  },
+  {
+    "version": "0.27.61",
+    "date": "2022-04-07",
+    "notes": [
+      "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/5071131967127-Inventory-Worksheet\", target=\"_blank\" rel=\"noopener noreferrer\">Inventory Worksheet</a> (previously known as the Catalogue Worksheet).",
+      "Implemented System Settings > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/5070875056919-Status-Options\", target=\"_blank\" rel=\"noopener noreferrer\">Status Options</a>.",
+      "Fix for an issue that caused problems when exporting pages."
+    ]
+  },
+  {
+    "version": "0.27.60",
+    "date": "2022-03-17",
+    "notes": [
+      "Implemented System Settings > <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/5081172140695-Departments\", target=\"_blank\" rel=\"noopener noreferrer\">Departments</a>.",
+      "Implemented the \"Locked\" column on the System Settings > Users screen."
+    ]
+  },
+  {
+    "version": "0.27.59",
+    "date": "2022-02-24",
+    "notes": [
+      "Fix for an issue that caused the \"Clear All Filters\" option to not clear all fields on various grid pages.",
+      "Fix for an issue that caused contact \"Notes\" to appear in the To-Do List when \"Show for All Users\" was checked.",
+      "Adjusted the serial unit details page to default to the \"Scheduled Maintenance\" tab, if applicable."
+    ]
+  },
+  {
+    "version": "0.27.58",
+    "date": "2022-02-03",
+    "notes": [
+      "Implemented the <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/4420294512407-The-Contact-s-Notes-Tasks-Tab-\" target=\"_blank\" rel=\"noopener noreferrer\">Notes/Tasks tab</a> within a contact.",
+      "Implemented the Flex5 workflow action engine.",
+      "Added an \"All\" option to the multi-selector filter in the inventory model's serial units tab.",
+      "Adjusted the scheduled inventory count Reconciliation page.",
+      "Adjusted the scheduled inventory count Scanning page."
+    ]
+  },
+  {
+    "version": "0.27.57",
+    "date": "2022-01-13",
+    "notes": [
+      "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/4418147270807\" target=\"_blank\" rel=\"noopener noreferrer\">Scheduled Inventory Counts.</a>",
+      "Implemented a multi-selector filter in the inventory model's \"serial units\" tab."
+    ]
+  },
+  {
+    "version": "0.27.56",
+    "date": "2021-12-21",
+    "notes": [
+      "Implemented the ability to configure custom field groups.",
+      "Fix for an issue that caused field names to not populate within popups."
+    ]
+  },
+  {
+    "version": "0.27.55",
+    "date": "2021-12-02",
+    "notes": [
+      "Implemented Maintenance History tab within contacts.",
+      "Implemented the ability to open the company contact when viewing an individual contact.",
+      "Renamed the \"Reported By\" field to \"Responsible Party\" in the new maintenance log popup.",
+      "Fix for an issue that caused undeleted units to be marked as deleted after outbound scan."
+    ]
+  },
+  {
+    "version": "0.27.54",
+    "date": "2021-11-11",
+    "notes": [
+      "Implemented the \"Past Due\" widget (located on the Home tab).",
+      "Adjusted the default tab when opening up a contact record (the default will be Assets tab).",
+      "Adjusted the contact's Assets tab to filter out Deleted, Decommissioned, and Sold assets.",
+      "Adjusted the \"Is Company\" field when creating a New Company (while creating a New Contact).",
+      "Fix for an issue that caused an error message when deleting the contact's barcode."
+    ]
+  },
+  {
+    "version": "0.27.53",
+    "date": "2021-10-21",
+    "notes": [
+      "Fix for an issue that prevented the ability to set a Due Date after scanning an asset to a contact.",
+      "Fix for an issue that did not properly log IP Addresses or Logouts in the User Access History.",
+      "Fix for an issue that only allowed 50 icons per category to populate when adding an icon to an inventory model or group."
+    ]
+  },
+  {
+    "version": "0.27.52",
+    "date": "2021-10-06",
+    "notes": [
+      "Implemented Contact Manager (within the Contacts menu).",
+      "Implemented the ability to download .CFG files."
+    ]
+  },
+  {
+    "version": "0.27.51",
+    "date": "2021-09-23",
+    "notes": [
+      "Implemented the \"Scan History\" tab within a contact record.",
+      "Implemented automated barcode generation for \"Contact\" resource types and Facilites.",
+      "Implemented Custom Field \"Option List\" type management."
+    ]
+  },
+  {
+    "version": "0.27.50",
+    "date": "2021-09-09",
+    "notes": [
+      "Implemented System Settings > Custom Fields configuration page.",
+      "Fix for an issue that caused color codes to not be present on deleted contacts or models within the Search menu."
+    ]
+  },
+  {
+    "version": "0.27.49",
+    "date": "2021-08-26",
+    "notes": [
+      "Implemented the Inventory Dashboard.",
+      "Implemented the Resource Types page (listed under System Settings).",
+      "Improved the new contact \"company\" field search results."
+    ]
+  },
+  {
+    "version": "0.27.48",
+    "date": "2021-08-12",
+    "notes": [
+      "Implemented the ability to bulk return assets in the Scan to Contact screen.",
+      "Implemented the \"Include Deleted/Closed\" option within the Search menu.",
+      "Implemented the ability to Export list pages.",
+      "Implemented the ability to upload a logo to Corporate Identities.",
+      "Fix for an issue that caused the UI to crash after deleting an image from a copied inventory model."
+    ]
+  },
+  {
+    "version": "0.27.47",
+    "date": "2021-07-29",
+    "notes": [
+      "Implemented the ability to undelete inventory models and serial units from the Inventory Manager page.",
+      "Implemented the ability to select and copy error message details."
+    ]
+  },
+  {
+    "version": "0.27.46",
+    "date": "2021-07-15",
+    "notes": [
+      "Fix for an issue that caused a login error when user's default location got deleted."
+    ]
+  },
+  {
+    "version": "0.27.45",
+    "date": "2021-07-01",
+    "notes": [
+      "Relocated the \"Send Feedback\" button to the Resource Browser (above the Profile icon).",
+      "Implemented a tooltip in the Resource Browser when text is too long.",
+      "Implemented the Flex5 search engine.",
+      "Fix for an issue that caused data to not update when changing the calendar template.",
+      "Fix for an issue that caused User to Contact relationships to not sync correctly."
+    ]
+  },
+  {
+  "version": "0.27.44",
+  "date": "2021-06-17",
+  "notes": [
+      "Implemented right-click quantity availability within the Inventory Tree.",
+      "Implemented \"enter\" key mapping to close prompts in scanning screens.",
+      "Implemented the business location drop-down menu (located in the header).",
+      "Fix for an issue that did not accept email format within the new contact/company popup window.",
+      "Fix for an issue that caused the location \"pencil\" on scanning screens to not be present when the location name is over 23 characters."
+    ]
+  },
+  {
+    "version": "0.27.43",
+    "date": "2021-06-03",
+    "notes": [
+      "Implemented the \"Asset Receipt\" report.",
+      "Implemented the ability to mark non-serialized quantities as OOC.",
+      "Implemented the copy, edit, and delete modify options in task element definitions.",
+      "Implemented \"Enter key mapped to OK button\" checkbox when creating or editing new inventory models and serial units.",
+      "Fix for an issue that caused inventory, contact, and business location images to appear condensed."
+    ]
+  },
+  {
+    "version": "0.27.42",
+    "date": "2021-05-20",
+    "notes": [
+      "Fix for an issue where you couldn't update or edit an existing inventory model image.",
+      "Fix for an issue where you couldn't move inventory models to the very bottom of an inventory group in the inventory group configuration page.",
+      "Fix for an issue where dragging and dropping a model from a child inventory group to a parent inventory group caused a UI glitch.",
+      "Fix for an issue that caused bulk deleting maintenance logs to not work as expected."
+    ]
+  },
+  {
+    "version": "0.27.41",
+    "date": "2021-05-06",
+    "notes": [
+      "Improved spacing and scrolling on grids with many columns.",
+      "Fix for an issue where deleted maintenance procedures were showing when creating a maintenance log.",
+      "Fix for an issue that showed contacts, maintenance procedures, locations, and other non-inventory in the Inventory Manager."
+    ]
+  },
+  {
+    "version": "0.27.40",
+    "date": "2021-04-22",
+    "notes": [
+      "Implemented double-click on an inventory group to collapse it.",
+      "Implemented the Files tab on contact pages.",
+      "Implemented the Files tab on serial unit pages.",
+      "Implemented the Files tab on inventory model pages.",
+      "Fix for an issue that caused non-serialized quantities to revert to previous numbers after saving.",
+      "Fix for an issue that caused the Scheduled Maintenance tab to show on non-serialized models.",
+      "Fix for an issue that allowed for duplicate users to be created.",
+      "Fix for an issue that prevented the \"Can View Tasks for All Users\" option from showing for some users.",
+      "Fix for an issue that caused a UI glitch in the inventory tree after adding \"Additional Groups\" to inventory.",
+      "Fix for an issue where the Time and Frequency settings of a scheduled maintenance entry were not saving.",
+      "Fix for an issue that caused a spinning wheel when attempting to log in as a user who does not have the Authenticated User permission granted."
+    ]
+  },
+  {
+    "version": "0.27.39",
+    "date": "2021-04-08",
+    "notes": [
+      "Implemented the To-Do List.",
+      "Implemented the \"Asset Register\" report.",
+      "Implemented the \"Asset Assignment Register\" report."
+    ]
+  },
+  {
+    "version": "0.27.38",
+    "date": "2021-03-25",
+    "notes": [
+      "Implemented the <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/1500003657602-Scheduled-Maintenance\" target=\"_blank\" rel=\"noopener noreferrer\">Scheduled Maintenance<\/a> feature.",
+      "Implemented a new \"Quick Links\" tab on the Home page, with quick links to commonly used features and functionality.",
+      "Removed irrelevant main menu options.",
+      "Fix for an issue that prevented an inventory group from being deleted."
+    ]
+  },
+  {
+    "version": "0.27.37",
+    "date": "2021-03-11",
+    "notes": [
+      "Implemented the Scan to Contact feature."
+    ]
+  }
+  ]
