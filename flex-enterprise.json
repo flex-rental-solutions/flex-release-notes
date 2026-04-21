@@ -1,4 +1,62 @@
 [
+    {
+    "version": "1.12.4",
+    "date": "2026-04-15",
+    "notes": [
+      "Fix for an issue where PayEngine payments were not applying to the element."
+    ]
+  },
+  {
+    "version": "1.12.3",
+    "date": "2026-04-10",
+    "notes": [
+      "Fix for an issue that caused an out-of-memory error when running certain reports with the new report engine.",
+      "Fix for an issue that caused an exception with the Financial Elements Data Producer when using the new report engine.",
+      "Fix for an issue that caused an SQL exception for certain users when using the new report engine."
+    ]
+  },
+  {
+    "version":  "1.12.2",
+    "date": "2026-04-09",
+    "notes": [
+      "Small UI updates, code adjustments, and bug fixes on \"Create a Quote\" guide for new customers.",
+      "Fix for an issue that caused a \"no byte\" report with the Batch Print functionality when using the new report engine.",
+      "Fix for an issue with the RTF Content Check report when using the new report engine",
+      "Fix for an issue that caused an exception for reports with unknown data producer types when using the new report engine.",
+      "Fix for an issue that caused an exception with the Inventory Model Storage Requirements Report when using the new report engine."
+    ]
+  },
+  {
+    "version": "1.12.1",
+    "date": "2026-04-08",
+    "notes": [
+      "Fix for an issue that caused an exception with the Inventory Model Contents Report when using the new report engine.",
+      "Fix for an issue that caused call times to be incorrect for certain lines with the Financial Document Data Producer when using the new report engine."
+    ]
+  },
+  {
+    "version": "1.12.0",
+    "date": "2026-04-08",
+    "notes": [
+      "Implemented <a href=\"https://helpcenter.flexrentalsolutions.com/hc/en-us/articles/35617758316695-CRM-Overview-and-Key-Concepts\" target=\"_blank\" rel=\"noopener noreferrer\">CRM connections</a> (HubSpot and Salesforce); this integration is in Beta.",
+      "Implemented a 30-sec tour of Flex for new customers.",
+      "Implemented \"Barcode Scanner Setup\" guided work for new customers – located in Quick Links.",
+      "Implemented Create Model and More Actions buttons within the Inventory Browser.",
+      "Adjusted Create a Quote guide for new customers.",
+      "Adjusted the inventory model On Order column to calculate only after selecting Fetch.",
+      "Fix for an issue that caused Email type workflow jobs to be skipped when used as a chained child or parent action.",
+      "Fix for an issue that caused undo scans to produce a Modification event in model's audit trail.",
+      "Fix for an issue that caused copied lines on POs to already be scanned as received.",
+      "Fix for an issue where updates were not syncing to Google Calendar when connected via the Staffing Portal. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> only)"
+    ]
+  },
+  {
+    "version": "1.11.22",
+    "date": "2026-04-07",
+    "notes": [
+      "Fix for an issue that caused unexpected results when using the Generate PDF with Docusign."
+    ]
+  },
   {
     "version": "1.11.21",
     "date": "2026-04-06",
