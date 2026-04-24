@@ -1,5 +1,43 @@
 [
-    {
+  {
+    "version": "1.12.9",
+    "date": "2026-04-23",
+    "notes": [
+      "Fix for the new report engine that caused an unexpected PDF filename for certain customers.",
+      "Fix for the new report engine that caused an exception when running the Unreturned Items Report with very large quantity values."
+    ]
+  },
+  {
+    "version": "1.12.8",
+    "date": "2026-04-23",
+    "notes": [
+      "Fix for an issue that caused an exception when using the Send to Client feature."
+    ]
+  },
+  {
+    "version": "1.12.7",
+    "date": "2026-04-22",
+    "notes": [
+      "Implemented the ability for the Send to Client feature to utilize the new report engine."
+    ]
+  },
+  {
+    "version": "1.12.6",
+    "date": "2026-04-21",
+    "notes": [
+      "Fix for the new report engine where an exception occurred when using the Quotes Commission report."
+    ]
+  },
+  {
+    "version": "1.12.5",
+    "date": "2026-04-20",
+    "notes": [
+      "Fix for the new report engine where an exception occurred when using the Quotes Forecasting report.",
+      "Fix for the new report engine where an exception occurred when using Report Groups with non-PDF formats.",
+      "Fix for the new report engine where exceptions occurred with several reports due to data type mismatches."
+    ]
+  },
+  {
     "version": "1.12.4",
     "date": "2026-04-15",
     "notes": [
@@ -16,7 +54,7 @@
     ]
   },
   {
-    "version":  "1.12.2",
+    "version": "1.12.2",
     "date": "2026-04-09",
     "notes": [
       "Small UI updates, code adjustments, and bug fixes on \"Create a Quote\" guide for new customers.",
@@ -178,29 +216,29 @@
     "version": "1.11.7",
     "date": "2026-03-24",
     "notes": [
-        "Fix for an issue that caused RTF terms to not properly handle ArialMT when using the new report engine."
+      "Fix for an issue that caused RTF terms to not properly handle ArialMT when using the new report engine."
     ]
   },
   {
     "version": "1.11.6",
     "date": "2026-03-24",
     "notes": [
-        "Fix for an issue that caused embedded reports' data producer type not to be correctly recognized.",
-        "Fix for an issue that caused logos not to scale properly when used with 'default' reports in the new report engine."
+      "Fix for an issue that caused embedded reports' data producer type not to be correctly recognized.",
+      "Fix for an issue that caused logos not to scale properly when used with 'default' reports in the new report engine."
     ]
   },
   {
     "version": "1.11.5",
     "date": "2026-03-23",
     "notes": [
-        "Fix for an issue that caused unexpected behavior when running certain reports through the Flex4 report engine."
+      "Fix for an issue that caused unexpected behavior when running certain reports through the Flex4 report engine."
     ]
   },
   {
     "version": "1.11.4",
     "date": "2026-03-20",
     "notes": [
-        "Fix for an issue that caused decreased scanning performance."
+      "Fix for an issue that caused decreased scanning performance."
     ]
   },
   {
@@ -458,15 +496,15 @@
     "version": "0.27.118",
     "date": "2025-08-11",
     "notes": [
-        "Implemented ability to reopen recently closed tabs.",
-        "Implemented change in browser refresh to keep all open tabs after refresh.",
-        "Implemented line item \"modify\" toolbar on financial documents, equipment lists, and contact lists.",
-        "Implemented “Workflow Usage” in Projects > Workflow.",
-        "Implemented “Go to Workflow Jobs” button in Projects > Workflow.",
-        "Implemented “Go to Workflow” button in Projects > Workflow Jobs.",
-        "Implemented “Workflow Job Usage” in Projects > Workflow Jobs.",
-        "Implemented a “Jobs” column in Projects > Workflow with hyperlinks to each job in the tooltip.",
-        "Fix for an issue that caused some workflow jobs to populate in inconsistent order."
+      "Implemented ability to reopen recently closed tabs.",
+      "Implemented change in browser refresh to keep all open tabs after refresh.",
+      "Implemented line item \"modify\" toolbar on financial documents, equipment lists, and contact lists.",
+      "Implemented “Workflow Usage” in Projects > Workflow.",
+      "Implemented “Go to Workflow Jobs” button in Projects > Workflow.",
+      "Implemented “Go to Workflow” button in Projects > Workflow Jobs.",
+      "Implemented “Workflow Job Usage” in Projects > Workflow Jobs.",
+      "Implemented a “Jobs” column in Projects > Workflow with hyperlinks to each job in the tooltip.",
+      "Fix for an issue that caused some workflow jobs to populate in inconsistent order."
     ]
   },
   {
@@ -660,7 +698,7 @@
     "notes": [
       "Implemented a QuickBooks Online settings option to enable or disable credit card payment options when exporting to QuickBooks.",
       "Fix for an issue that didn't allow opening note lines on elements that were locked or closed."
-      ]
+    ]
   },
   {
     "version": "0.27.105",
@@ -829,7 +867,7 @@
       "Fix for an issue that caused an authentication error for DocuSign.",
       "Implemented the Availability Inquiries/Offers tab on contacts. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> only)",
       "Implemented the inquiries/offers \"usage\" counter in the Staffing menu. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> only)"
-      ]
+    ]
   },
   {
     "version": "0.27.95",
@@ -1063,31 +1101,31 @@
     "announcement": "<a href=\"https://www.eventbrite.com/e/flex-rental-solutions-presents-flexcon-23-tickets-601758424647\" target=\"_blank\" rel=\"noopener noreferrer\">Click here to register for FlexCon '23!</a>"
   },
   {
-  "version": "0.27.79",
-  "date": "2023-04-20",
-  "notes": [
-    "Implemented the ability to clone element definitions.",
-    "Implemented the ability to download backups.",
-    "Implemented the \"discountable\" and \"maximum discount(%)\" columns to the Inventory Worksheet.",
-    "Implemented the document number to QuickBooks errors to improve referencing the error source.",
-    "Adjusted the Income by Department report to include a location filter.",
-    "Adjusted the model's discountable setting to not be editable when the resource type doesn't discount.",
-    "Fix for an issue that showed the contact UUID after adding a new contact.",
-    "Fix for an issue that caused the \"barcode label\" field to not update in the inventory worksheet.",
-    "Fix for an issue that did not adjust the currency when changing the location on a financial document.",
-    "Fix for an issue that required the \"can configure project elements\" permission in order to edit custom field \"options list\" fields.",
-    "Fix for an issue that allowed a user with the \"can browse & search hidden items\" permission denied to be able to view hidden items in the inventory manager.",
-    "Fix for an issue that calculated an incorrect price when applying tiers overnight.",
-    "Fix for an issue that caused notes to not inherit to the crew call.",
-    "Fix for an issue that caused the \"contents permanent\" field in an inventory model to not save.",
-    "Fix for an issue that caused the serial unit image to be cut off.",
-    "Fix for an issue that caused the document number of a crew call to appear as \"unassigned\" when using a manual numbering scheme.",
-    "Fix for an issue that sent multiple crew call emails to one contact.",
-    "Fix for an issue that caused the \"Open/Closed\" field in the new element popup to default to \"closed\".",
-    "Fix for an issue that caused the \"copy image link\" to not display.",
-    "Fix for an issue that caused disabled model contents to add to elements.",
-    "Fix for an issue that caused QuickBooks to disconnect from Flex unexpectedly.",
-    "Fix for an issue with Flex exporting to QuickBooks Desktop."
+    "version": "0.27.79",
+    "date": "2023-04-20",
+    "notes": [
+      "Implemented the ability to clone element definitions.",
+      "Implemented the ability to download backups.",
+      "Implemented the \"discountable\" and \"maximum discount(%)\" columns to the Inventory Worksheet.",
+      "Implemented the document number to QuickBooks errors to improve referencing the error source.",
+      "Adjusted the Income by Department report to include a location filter.",
+      "Adjusted the model's discountable setting to not be editable when the resource type doesn't discount.",
+      "Fix for an issue that showed the contact UUID after adding a new contact.",
+      "Fix for an issue that caused the \"barcode label\" field to not update in the inventory worksheet.",
+      "Fix for an issue that did not adjust the currency when changing the location on a financial document.",
+      "Fix for an issue that required the \"can configure project elements\" permission in order to edit custom field \"options list\" fields.",
+      "Fix for an issue that allowed a user with the \"can browse & search hidden items\" permission denied to be able to view hidden items in the inventory manager.",
+      "Fix for an issue that calculated an incorrect price when applying tiers overnight.",
+      "Fix for an issue that caused notes to not inherit to the crew call.",
+      "Fix for an issue that caused the \"contents permanent\" field in an inventory model to not save.",
+      "Fix for an issue that caused the serial unit image to be cut off.",
+      "Fix for an issue that caused the document number of a crew call to appear as \"unassigned\" when using a manual numbering scheme.",
+      "Fix for an issue that sent multiple crew call emails to one contact.",
+      "Fix for an issue that caused the \"Open/Closed\" field in the new element popup to default to \"closed\".",
+      "Fix for an issue that caused the \"copy image link\" to not display.",
+      "Fix for an issue that caused disabled model contents to add to elements.",
+      "Fix for an issue that caused QuickBooks to disconnect from Flex unexpectedly.",
+      "Fix for an issue with Flex exporting to QuickBooks Desktop."
     ]
   },
   {
@@ -2147,26 +2185,26 @@
     "version": "0.27.26",
     "date": "2020-10-01",
     "notes": [
-        "Implemented a page to download the Flex4 app (on the Help menu).",
-        "Implemented the ability to prep and return scan on Equipment Lists.",
-        "Implemented the ability to create or edit new users. (System Settings > Users)",
-        "Implemented the User Access History Page. (System Settings > User Access History)",
-        "Implemented Report Groups.",
-        "Implemented the summary row for Received Payments. (Financials > Received Payments)",
-        "Updated the log in screen with information on how to continue in Flex4.",
-        "User menu polishing (in the bottom left when clicking on the user icon).",
-        "Added a Flex4 link in the \"Calculation Prompt\".",
-        "A fix for an issue that was not allowing users to add inventory models from \"additional\" group locations in the inventory tree.",
-        "A fix for an issue that caused misc. lines quantities on a Quote to not inherit on the Pullsheet.",
-        "A fix for an issue that allowed user to delete elements even if the \"Can Delete Project Elements\" permission was denied.",
-        "A fix for an issue that caused a spinning wheel when reloading the \"home\" tab.",
-        "A fix for an issue that caused the Deposit amount field to not calculate correctly.",
-        "A fix for an issue that would update the original inventory model's image when adjusting the image of a copied model.",
-        "A fix for an issue that was not allowing discount rules to apply when adjusting the resource type of a line item.",
-        "A fix for an issue that allowed the \"balance due\" of a copied Quote to inherit to the new Quote.",
-        "A fix for an issue that caused the \"Total Payment\" of a Received Payment to not populate.",
-        "A fix for an issue that caused all pricing models to be enabled for Service Types.",
-        "A fix for an issue that caused \"ghost\" business locations to appear in some customer's instances."
+      "Implemented a page to download the Flex4 app (on the Help menu).",
+      "Implemented the ability to prep and return scan on Equipment Lists.",
+      "Implemented the ability to create or edit new users. (System Settings > Users)",
+      "Implemented the User Access History Page. (System Settings > User Access History)",
+      "Implemented Report Groups.",
+      "Implemented the summary row for Received Payments. (Financials > Received Payments)",
+      "Updated the log in screen with information on how to continue in Flex4.",
+      "User menu polishing (in the bottom left when clicking on the user icon).",
+      "Added a Flex4 link in the \"Calculation Prompt\".",
+      "A fix for an issue that was not allowing users to add inventory models from \"additional\" group locations in the inventory tree.",
+      "A fix for an issue that caused misc. lines quantities on a Quote to not inherit on the Pullsheet.",
+      "A fix for an issue that allowed user to delete elements even if the \"Can Delete Project Elements\" permission was denied.",
+      "A fix for an issue that caused a spinning wheel when reloading the \"home\" tab.",
+      "A fix for an issue that caused the Deposit amount field to not calculate correctly.",
+      "A fix for an issue that would update the original inventory model's image when adjusting the image of a copied model.",
+      "A fix for an issue that was not allowing discount rules to apply when adjusting the resource type of a line item.",
+      "A fix for an issue that allowed the \"balance due\" of a copied Quote to inherit to the new Quote.",
+      "A fix for an issue that caused the \"Total Payment\" of a Received Payment to not populate.",
+      "A fix for an issue that caused all pricing models to be enabled for Service Types.",
+      "A fix for an issue that caused \"ghost\" business locations to appear in some customer's instances."
     ]
   },
   {
@@ -2551,7 +2589,7 @@
       "Fix for an issue that caused an error when attempting to view a document view header with no header block fields set up.",
       "Fix for an issue that caused service resource type notes to add to an element incorrectly.",
       "Fix for an issue that would show all units of measure when choosing from the list while creating inventory, instead of just showing units of measure with Count Unit = Yes."
-      ]
+    ]
   },
   {
     "version": "0.27.8",
