@@ -1,5 +1,96 @@
 [
   {
+    "version": "1.13.0",
+    "date": "2026-05-06",
+    "notes": [
+      "Implemented a search field to the inventory browser.",
+      "Implemented a Created Date column in the inventory manager.",
+      "Implemented a \"Switch to Catalog\" option in the inventory browser for trial customers – explore sample data before your own data is imported.",
+      "Fix for an issue where a serial unit could be marked as OOC multiple times when logging maintenance from scheduled maintenance.",
+      "Fix for serial unit OOC status and current location not refreshing in unit details.",
+      "Fix for an issue where hovering over items in the inventory browser would highlight or bold."
+    ]
+  },
+  {
+    "version": "1.12.19",
+    "date": "2026-05-06",
+    "notes": [
+      "Fix for the new report engine that caused an exception to be thrown when using the Default Financial Document and no Detail Columns were configured.",
+      "Fix for the new report engine that caused an exception to be thrown when using the Default Financial Document where all Total Block Rows were configured to not 'print if zero' and all totals were zero."
+    ]
+  },
+  {
+    "version": "1.12.18",
+    "date": "2026-04-30",
+    "notes": [
+      "Fix for the new report engine that caused certain Aggregation reports to not be included in the output.",
+      "Fix for the new report engine to swap the pagination and generated date in the footer of default reports."
+    ]
+  },
+  {
+    "version": "1.12.17",
+    "date": "2026-04-30",
+    "notes": [
+      "Increased the Staffing Portal one-time passcode (OTP) expiration from 30 seconds to 5 minutes."
+    ]
+  },
+  {
+    "version": "1.12.16",
+    "date": "2026-04-30",
+    "notes": [
+      "Fix for the new report engine that caused the 'Print As Landscape' option of a Document View to be ignored when using the Default Financial Document."
+    ]
+  },
+  {
+    "version": "1.12.15",
+    "date": "2026-04-29",
+    "notes": [
+      "Fix for the new report engine that caused percent values in the Total Block of the Default Financial Document to render as currency."
+    ]
+  },
+  {
+    "version": "1.12.14",
+    "date": "2026-04-29",
+    "notes": [
+      "Fix for an issue that caused the Generate PDF request to incorrectly route to the old report engine when no Default Print Format Report was configured.",
+      "Fix for the new report engine that caused Line Muted Blank Lines to incorrectly appear in the Default Financial Document."
+    ]
+  },
+  {
+    "version": "1.12.13",
+    "date": "2026-04-28",
+    "notes": [
+      "Fix for the new report engine when using the Additional Scanned Items report.",
+      "Fix for the new report engine where an exception was thrown when Report Groups were configured.",
+      "Fix for the new report engine where Note lines added as Suggestions were omitted from financial document data producer output."
+    ]
+  },
+  {
+    "version": "1.12.12",
+    "date": "2026-04-28",
+    "notes": [
+      "Fix for the new report engine where Note line edits were not applied to the financial document data producer output."
+    ]
+  },
+  {
+    "version": "1.12.11",
+    "date": "2026-04-28",
+    "notes": [
+      "Fix for an issue where custom field values were not persisting on contacts."
+    ],
+    "pinned": {
+      "message": "RTF Terms & Conditions will be deprecated in a future release. Please migrate any RTF Terms & Conditions to the HTML editor at your earliest convenience.",
+      "flag": "TWR-615"
+    }
+  },
+  {
+    "version": "1.12.10",
+    "date": "2026-04-24",
+    "notes": [
+      "Fix for the new report engine that caused configured Authorized Groups to be ignored in some cases."
+    ]
+  },
+  {
     "version": "1.12.9",
     "date": "2026-04-23",
     "notes": [
