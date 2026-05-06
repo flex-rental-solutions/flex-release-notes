@@ -1,4 +1,15 @@
 [
+  {
+    "version": "1.13.0",
+    "date": "2026-05-06",
+    "notes": [
+      "Implemented a search field to the inventory browser.",
+      "Implemented a Created Date column in the inventory manager.",
+      "Fix for an issue where a serial unit could be marked as OOC multiple times when logging maintenance from scheduled maintenance.",
+      "Fix for serial unit OOC status and current location not refreshing in unit details.",
+      "Fix for an issue where custom field values were not persisting on contacts."
+    ]
+  },
     {
     "version": "1.12.0",
     "date": "2026-04-08",
