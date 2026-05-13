@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.13.2",
+    "date": "2026-05-13",
+    "notes": [
+      "Adjusted QBO Naming Settings logic (for Customer Name Postfix and Vendor Name Postfix fields) to mitigate the issue of duplicate clients/vendors when exporting elements to QuickBooks."
+    ]
+  },
+  {
     "version": "1.13.1",
     "date": "2026-05-12",
     "notes": [
