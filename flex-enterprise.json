@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.13.3",
+    "date": "2026-05-14",
+    "notes": [
+      "Fix for the new report engine that caused child summary records to sort incorrectly in the Budget Summary Data Producer.",
+      "Fix for the new report engine that caused Standard Discount names to render as 'null' in the Financial Document Data Producer."
+    ]
+  },
+  {
     "version": "1.13.2",
     "date": "2026-05-13",
     "notes": [
