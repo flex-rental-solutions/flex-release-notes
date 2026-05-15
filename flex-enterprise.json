@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.13.4",
+    "date": "2026-05-16",
+    "notes": [
+      "Fixed Unavailable dates displaying as Busy when connected to Google via staffing portal.",
+    ]
+  },
+  {
     "version": "1.13.3",
     "date": "2026-05-14",
     "notes": [
