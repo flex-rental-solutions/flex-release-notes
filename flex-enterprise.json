@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.13.5",
+    "date": "2026-05-18",
+    "notes": [
+      "Internal code changes"
+    ]
+  },
+  {
     "version": "1.13.4",
     "date": "2026-05-15",
     "notes": [
