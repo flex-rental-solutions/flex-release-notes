@@ -3,7 +3,7 @@
     "version": "1.13.6",
     "date": "2026-05-19",
     "notes": [
-      "Fix for the new report engine that caused the 'number' field of the budget summary data producer to be set to 'UNASSIGNED' instead of null."
+      "Fix for the new report engine that caused the `number` field of the budget summary data producer to be set to 'UNASSIGNED' instead of `null`."
     ]
   },
   {
