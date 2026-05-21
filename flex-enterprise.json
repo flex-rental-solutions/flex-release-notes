@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.13.7",
+    "date": "2026-05-21",
+    "notes": [
+      "Fix for the new report engine that caused an exception when running the StaffingPlus Response Summary report."
+    ]
+  },
+  {
     "version": "1.13.6",
     "date": "2026-05-19",
     "notes": [
