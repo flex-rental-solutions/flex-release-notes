@@ -1,0 +1,28 @@
+name: Validate JSON Files
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate flex-enterprise.json
+        run: |
+          if ! jq -e '. | length > 0' flex-enterprise.json > /dev/null; then
+            echo "Error: flex-enterprise.json is empty or invalid JSON"
+            exit 1
+          fi
+
+      - name: Validate flex-assets.json
+        run: |
+          if ! jq -e '. | length > 0' flex-assets.json > /dev/null; then
+            echo "Error: flex-assets.json is empty or invalid JSON"
+            exit 1
+          fi
