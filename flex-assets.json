@@ -10,7 +10,7 @@
       "Fix for an issue where custom field values were not persisting on contacts."
     ]
   },
-  {
+    {
     "version": "1.12.0",
     "date": "2026-04-08",
     "notes": [
@@ -56,7 +56,7 @@
     "version": "1.5.0",
     "date": "2026-01-27",
     "notes": [
-      "Implemented Welcome popup with Help Center search capability for Flex trial users."
+        "Implemented Welcome popup with Help Center search capability for Flex trial users."
     ]
   },
   {
@@ -155,18 +155,18 @@
     ]
   },
   {
-    "version": "0.27.113",
-    "date": "2025-05-08",
-    "notes": [
-      "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/31565327017111-Send-User-Invitation-Email\" target=\"_blank\" rel=\"noopener noreferrer\">user invitation functionality</a> (via User popup).",
-      "Implemented the ability to <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/31592083710871-Default-Home-View\" target=\"_blank\" rel=\"noopener noreferrer\">set a default Home view.</a>",
-      "Implemented various help center links within the header of popups.",
-      "Implemented a file attachment field within Contact Flex Support form. ",
-      "Implemented additional tooltips for fields within Element Definitions.",
-      "Adjusted the fields within the New/Edit User popup and added collapsible sections.",
-      "Removed the Help option from the Main Menu (now located within the Resource Browser)."
-    ]
-  },
+  "version": "0.27.113",
+  "date": "2025-05-08",
+  "notes": [
+    "Implemented <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/31565327017111-Send-User-Invitation-Email\" target=\"_blank\" rel=\"noopener noreferrer\">user invitation functionality</a> (via User popup).",
+    "Implemented the ability to <a href=\"https://helpcenter.flexassetsolutions.com/hc/en-us/articles/31592083710871-Default-Home-View\" target=\"_blank\" rel=\"noopener noreferrer\">set a default Home view.</a>",
+    "Implemented various help center links within the header of popups.",
+    "Implemented a file attachment field within Contact Flex Support form. ",
+    "Implemented additional tooltips for fields within Element Definitions.",
+    "Adjusted the fields within the New/Edit User popup and added collapsible sections.",
+    "Removed the Help option from the Main Menu (now located within the Resource Browser)."
+  ]
+},
   {
     "version": "Add New Corporate Identities",
     "date": "2025-04-16",
@@ -327,7 +327,7 @@
     "version": "0.27.93",
     "date": "2024-02-22",
     "notes": [
-      "Fix for an issue that caused an error after a browser refresh."
+        "Fix for an issue that caused an error after a browser refresh."
     ]
   },
   {
@@ -769,9 +769,9 @@
     ]
   },
   {
-    "version": "0.27.44",
-    "date": "2021-06-17",
-    "notes": [
+  "version": "0.27.44",
+  "date": "2021-06-17",
+  "notes": [
       "Implemented right-click quantity availability within the Inventory Tree.",
       "Implemented \"enter\" key mapping to close prompts in scanning screens.",
       "Implemented the business location drop-down menu (located in the header).",
@@ -852,4 +852,4 @@
       "Implemented the Scan to Contact feature."
     ]
   }
-]
+  ]
