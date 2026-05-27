@@ -1,7 +1,14 @@
 [
   {
+    "version": "1.14.1",
+    "date": "2026-05-27",
+    "notes": [
+      "Fix for the new report engine that caused logos to be incorrectly sized for 'default' reports."
+    ]
+  },
+  {
     "version": "1.14.0",
-    "date": "2026-05-28",
+    "date": "2026-05-27",
     "notes": [
       "Added new user help Guides to Home > Quick Links tab",
       "Added Created and Last Modified date columns to Contact Manager",
