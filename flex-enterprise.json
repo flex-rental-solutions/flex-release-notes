@@ -10,6 +10,14 @@
     "announcement": "\uD83D\uDC4B Welcome to a new way of seeing What’s New at Flex! We’ve changed the way we’re communicating about the product in this space. You’ll still see valuable information here about the Flex company and product, but it’ll just be the highlights.<br/><br/>The same detailed information you’re used to (like bug fixes and small changes) can now be found in our changelog.<br/><br/>"
   },
   {
+    "version": "1.13.8",
+    "date": "2026-05-27",
+    "notes": [
+      "Fix for the new report engine that caused spacer rows in the Total Block to render incorrectly.",
+      "Fix for the new report engine that caused aggregation reports to sort elements in the wrong order."
+    ]
+  },
+  {
     "version": "1.13.7",
     "date": "2026-05-21",
     "notes": [
