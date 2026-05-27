@@ -3,7 +3,8 @@
     "version": "1.13.8",
     "date": "2026-05-27",
     "notes": [
-      "Fix for the new report engine that caused spacer rows in the Total Block to render incorrectly."
+      "Fix for the new report engine that caused spacer rows in the Total Block to render incorrectly.",
+      "Fix for the new report engine that caused aggregation reports to sort elements in the wrong order."
     ]
   },
   {
