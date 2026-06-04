@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.14.5",
+    "date": "2026-06-04",
+    "notes": [
+      "Fix for the new report engine that caused certain percentage fields of the financial document data producer to render unexpected values."
+    ]
+  },
+  {
     "version": "1.14.4",
     "date": "2026-06-02",
     "notes": [
