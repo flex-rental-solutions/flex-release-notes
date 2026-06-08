@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.14.7",
+    "date": "2026-06-08",
+    "notes": [
+      "Fix for an issue that caused an exception with the Send To Client in certain cases."
+    ]
+  },
+  {
     "version": "1.14.6",
     "date": "2026-06-05",
     "notes": [
