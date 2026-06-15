@@ -1,17 +1,17 @@
 [
   {
-    "version": "1.14.8",
-    "date": "2026-06-12",
-    "notes": [
-      "Various fixes for the new report engine."
-    ]
-  },
-  {
-    "version": "1.14.8",
+    "version": "1.14.9",
     "date": "2026-06-15",
     "notes": [
       "Fix for the new report engine that caused an exception with the Default Equipment List in certain cases.",
       "Fix for the new report engine that caused unexpected results in the 'condensed records' of the equipment list data producer."
+    ]
+  },
+  {
+    "version": "1.14.8",
+    "date": "2026-06-12",
+    "notes": [
+      "Various fixes for the new report engine."
     ]
   },
   {
