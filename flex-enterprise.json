@@ -11,8 +11,12 @@
     "version": "1.15.0",
     "date": "2026-06-17",
     "notes": [
-      "Nothing big to share this time, but we're working on some exciting features we'll be sharing soon. For specifics on small UI updates, code adjustments, and bug fixes use the link below."
-    ]
+      "Improved Custom Report Dialog usability."
+    ],
+    "pinned": {
+      "message": "We're excited to introduce a new way to help your team get the most out of Flex: a 10-week Live Webinar Training Program.\n\nWeek 1 starts with the foundations for everyone, then dives into department-specific topics from there. Have a look at the <a href=\"https://www.flexrentalsolutions.com/flex-support/flex-training/training-course/\" target=\"_blank\" rel=\"noopener noreferrer\">full program outline with the weekly breakdown</a> to see which track is right for you.\n\nStarts next Wednesday, June 24th.",
+      "flag": "TWR-688"
+    }
   },
   {
     "version": "1.14.11",
