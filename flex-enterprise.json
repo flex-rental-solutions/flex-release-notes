@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.15.1",
+    "date": "2026-06-17",
+    "notes": [
+      "Fix for the new report engine that caused unexpected result in the 'records' of the equipment list data producer."
+    ]
+
+  },
+  {
     "version": "1.15.0",
     "date": "2026-06-17",
     "notes": [
