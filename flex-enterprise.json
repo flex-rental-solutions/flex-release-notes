@@ -3,7 +3,8 @@
     "version": "1.15.1",
     "date": "2026-06-17",
     "notes": [
-      "Fix for the new report engine that caused unexpected result in the 'records' of the equipment list data producer."
+      "Fix for the new report engine that caused unexpected results in the 'record' of the equipment list data producer.",
+      "Fix for the new report engine that caused unexpected results in the 'containerRecord' of the equipment list data producer."
     ]
 
   },
