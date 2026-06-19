@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.15.3",
+    "date": "2026-06-19",
+    "notes": [
+      "Fix for an issue that caused newly created custom report to not have the expected report level."
+    ]
+  },
+  {
     "version": "1.15.2",
     "date": "2026-06-18",
     "notes": [
