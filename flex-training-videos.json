@@ -22,7 +22,8 @@
     "_notes": [
       "category: can be a single string ('Warehouse') or an array (['Warehouse', 'Sales']) — all listed categories appear as badges and the video shows under any matching filter.",
       "tags (optional array): hidden search keywords — not displayed anywhere, but users can find the video by searching for them. e.g. ['navigation', 'user roles', 'barcode']",
-      "isNew (optional boolean): set to true to show a 'New' badge over the video thumbnail. Remove or set to false once the video is no longer new."
+      "isNew (optional boolean): set to true to show a 'New' badge over the video thumbnail. Remove or set to false once the video is no longer new.",
+      "youtubeId: any value starting with 'PLACEHOLDER' will render a Coming Soon overlay and disable clicking. Replace it with the real YouTube video ID when the video is ready and the Coming Soon state will disappear automatically."
     ]
   },
   {
