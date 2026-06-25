@@ -1,0 +1,109 @@
+[
+  {
+    "_readme": "HOW TO ADD A TRAINING VIDEO — this object is ignored by the app, it is documentation only",
+    "_steps": [
+      "1. Go to the YouTube video and copy the URL, e.g. https://www.youtube.com/watch?v=pWsZNV-XOfk",
+      "2. The video ID is the part after '?v=' — in this example: pWsZNV-XOfk",
+      "3. Copy one of the video entries below and paste it at the end of the list (before the closing ])",
+      "4. Fill in: id (unique slug), title, description, youtubeId, category, date (YYYY-MM-DD)",
+      "5. category can be a single string or an array — all listed categories appear as badges and the video shows under any matching filter",
+      "6. Commit and push this file — changes go live immediately (no code deploy needed)"
+    ],
+    "_example": {
+      "id": "your-unique-slug",
+      "title": "Your Video Title",
+      "description": "A short sentence or two about what this video covers.",
+      "youtubeId": "pWsZNV-XOfk",
+      "category": ["Warehouse", "Sales"],
+      "tags": ["navigation", "getting started", "basics"],
+      "date": "2026-06-25",
+      "isNew": true
+    },
+    "_notes": [
+      "category: can be a single string ('Warehouse') or an array (['Warehouse', 'Sales']) — all listed categories appear as badges and the video shows under any matching filter.",
+      "tags (optional array): hidden search keywords — not displayed anywhere, but users can find the video by searching for them. e.g. ['navigation', 'user roles', 'barcode']",
+      "isNew (optional boolean): set to true to show a 'New' badge over the video thumbnail. Remove or set to false once the video is no longer new.",
+      "youtubeId: any value starting with 'PLACEHOLDER' will render a Coming Soon overlay and disable clicking. Replace it with the real YouTube video ID when the video is ready and the Coming Soon state will disappear automatically."
+    ]
+  },
+  {
+    "id": "session-1-system-foundations",
+    "title": "Session 1: System Foundations",
+    "description": "An introduction to Flex for all users — navigation, user roles, key settings, item types, and the basic workflow from Quote to Return.",
+    "youtubeId": "GQ6WDxqURCQ",
+    "category": ["Warehouse", "Sales", "Accounting", "Admin"],
+    "date": "2026-06-25"
+  },
+  {
+    "id": "session-2-inventory-warehouse-operations",
+    "title": "Session 2: Inventory & Warehouse Operations",
+    "description": "Coming soon — deep dive into inventory models, warehouse workflows, and operational best practices.",
+    "youtubeId": "PLACEHOLDER_2",
+    "category": ["Warehouse", "Admin"],
+    "date": "2026-06-25"
+  },
+  {
+    "id": "session-3-quoting-sales-workflow",
+    "title": "Session 3: Quoting & Sales Workflow",
+    "description": "Coming soon — building quotes, managing the sales pipeline, and converting proposals to orders.",
+    "youtubeId": "PLACEHOLDER_3",
+    "category": ["Sales", "Admin"],
+    "date": "2026-06-25"
+  },
+  {
+    "id": "session-4-order-execution-lifecycle",
+    "title": "Session 4: Order Execution & Lifecycle Management",
+    "description": "Coming soon — managing orders from confirmation through delivery, scanning, and return.",
+    "youtubeId": "PLACEHOLDER_4",
+    "category": ["Warehouse", "Sales", "Admin"],
+    "date": "2026-06-25"
+  },
+  {
+    "id": "session-5-inventory-staffing-logistics",
+    "title": "Session 5: Inventory & Staffing Logistics",
+    "description": "Coming soon — coordinating inventory availability, staff assignments, and logistics planning.",
+    "youtubeId": "PLACEHOLDER_5",
+    "category": ["Warehouse", "Sales", "Admin"],
+    "date": "2026-06-25"
+  },
+  {
+    "id": "session-6-invoicing-payments-accounting",
+    "title": "Session 6: Invoicing, Payments & Accounting",
+    "description": "Coming soon — generating invoices, processing payments, and managing your accounting workflow in Flex.",
+    "youtubeId": "PLACEHOLDER_6",
+    "category": ["Accounting", "Admin"],
+    "date": "2026-06-25"
+  },
+  {
+    "id": "session-7-reporting-business-insights",
+    "title": "Session 7: Reporting & Business Insights",
+    "description": "Coming soon — built-in reports, custom report building, and using dashboards to drive business decisions.",
+    "youtubeId": "PLACEHOLDER_7",
+    "category": ["Sales", "Accounting", "Admin"],
+    "date": "2026-06-25"
+  },
+  {
+    "id": "session-8-system-configuration",
+    "title": "Session 8: System Configuration & Administration",
+    "description": "Coming soon — configuring Flex for your organization, managing settings, and system administration.",
+    "youtubeId": "PLACEHOLDER_8",
+    "category": ["Admin"],
+    "date": "2026-06-25"
+  },
+  {
+    "id": "session-9-advanced-configuration",
+    "title": "Session 9: Advanced System Configuration",
+    "description": "Coming soon — advanced configuration topics, custom fields, integrations, and power-user settings.",
+    "youtubeId": "PLACEHOLDER_9",
+    "category": ["Admin"],
+    "date": "2026-06-25"
+  },
+  {
+    "id": "session-10-rfid-concluding-qa",
+    "title": "Session 10: RFID & Concluding Q&A",
+    "description": "Coming soon — RFID setup and workflows, plus a live Q&A wrapping up the 10-week training series.",
+    "youtubeId": "PLACEHOLDER_10",
+    "category": ["Warehouse", "Admin"],
+    "date": "2026-06-25"
+  }
+]
