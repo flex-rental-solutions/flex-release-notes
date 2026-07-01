@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.15.9",
+    "date": "2026-07-01",
+    "notes": [
+      "Fix for the new report engine that caused sub-datasets not to have a database connection."
+    ]
+  },
+  {
     "version": "1.15.5",
     "date": "2026-06-24",
     "notes": [
