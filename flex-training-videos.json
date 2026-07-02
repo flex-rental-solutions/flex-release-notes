@@ -37,10 +37,10 @@
   {
     "id": "session-2-inventory-warehouse-operations",
     "title": "Session 2: Inventory & Warehouse Operations",
-    "description": "Coming soon — deep dive into inventory models, warehouse workflows, and operational best practices.",
-    "youtubeId": "PLACEHOLDER_2",
+    "description": "Session 2 covers Inventory & Warehouse Operations.\n\nTraining Topics:\nInventory structure (tree, presets, models, units)\nAvailability tracking & conflicts\nCheck-out / check-in workflows\nTransfers between locations\nBarcode scanning\nDamage, loss, and maintenance tracking\n\nOutcome:\nStaff can confidently manage physical inventory in the system.",
+    "youtubeId": "JYsFCRxzcv4",
     "category": ["Warehouse", "Admin"],
-    "date": "2026-06-25"
+    "date": "2026-07-01"
   },
   {
     "id": "session-3-quoting-sales-workflow",
