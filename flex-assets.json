@@ -1,9 +1,8 @@
 [
   {
     "version": "1.16.0",
-    "date": "2026-07-08",
-    "notes": [
-    ],
+    "date": "2026-07-09",
+    "notes": [],
     "announcement": "Import contacts with ease – right inside Flex! No more adding contacts one at a time or waiting for assistance with big files. Use any CSV file, as is. No need to edit or adjust the file before hand. Export from anywhere you have contacts and get them where you need them in no time. Automatically checks for proper formatting, duplicates, and incomplete data. And lets you make corrections on the fly! <a class=\"flex-app-redirect\" href=\"#contact-import/import\">Get started</a> today.<br/>"
   },
   {
