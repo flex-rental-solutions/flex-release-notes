@@ -8,6 +8,20 @@
     "announcement": "Import contacts with ease – right inside Flex! No more adding contacts one at a time or waiting for assistance with big files. Use any CSV file, as is. No need to edit or adjust the file beforehand. Export from anywhere you have contacts and get them where you need them in no time. Automatically checks for proper formatting, duplicates, and incomplete data. And lets you make corrections on the fly! <a class=\"flex-app-redirect\" href=\"#contact-import/import\">Get started</a> today.<br/><br/><span style=\"font-weight: normal;\">More highlights from this release:</span>"
   },
   {
+    "version": "1.15.12",
+    "date": "2026-07-08",
+    "notes": [
+      "Fix for an issue that caused the custom reports not to generate for customers spun up after May 1st, 2026."
+    ]
+  },
+  {
+    "version": "1.15.11",
+    "date": "2026-07-07",
+    "notes": [
+      "Fix for an issue related to the new inventory import process."
+    ]
+  },
+  {
     "version": "1.15.10",
     "date": "2026-07-06",
     "notes": [
