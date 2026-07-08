@@ -15,6 +15,13 @@
     ]
   },
   {
+    "version": "1.15.11",
+    "date": "2026-07-07",
+    "notes": [
+      "Fix for an issue related to the new inventory import process."
+    ]
+  },
+  {
     "version": "1.15.10",
     "date": "2026-07-06",
     "notes": [
