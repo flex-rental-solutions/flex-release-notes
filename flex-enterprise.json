@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.16.1",
+    "date": "2026-07-09",
+    "notes": [
+      "Various fixes and improvements for the new report engine."
+    ]
+  },
+  {
     "version": "1.16.0",
     "date": "2026-07-09",
     "notes": [
