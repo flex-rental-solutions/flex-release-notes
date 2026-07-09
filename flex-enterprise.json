@@ -15,6 +15,20 @@
     "announcement": "Import contacts with ease – right inside Flex! No more adding contacts one at a time or waiting for assistance with big files. Use any CSV file, as is. No need to edit or adjust the file beforehand. Export from anywhere you have contacts and get them where you need them in no time. Automatically checks for proper formatting, duplicates, and incomplete data. And lets you make corrections on the fly! <a class=\"flex-app-redirect\" href=\"#contact-import/import\">Get started</a> today.<br/><br/><span style=\"font-weight: normal;\">More highlights from this release:</span>"
   },
   {
+    "version": "1.15.12",
+    "date": "2026-07-08",
+    "notes": [
+      "Fix for an issue that caused the custom reports not to generate for customers spun up after May 1st, 2026."
+    ]
+  },
+  {
+    "version": "1.15.11",
+    "date": "2026-07-07",
+    "notes": [
+      "Fix for an issue related to the new inventory import process."
+    ]
+  },
+  {
     "version": "1.15.10",
     "date": "2026-07-06",
     "notes": [
@@ -94,7 +108,7 @@
     ],
     "announcement": "We're excited to introduce a new way to help your team get the most out of Flex: a 10-week Live Webinar Training Program. \uD83E\uDD73 <br/><br/>Week 1 starts with the foundations for everyone, then dives into department-specific topics from there. Have a look at the <a href=\"https://www.flexrentalsolutions.com/flex-support/flex-training/training-course/\" target=\"_blank\" rel=\"noopener noreferrer\">full program outline with the weekly breakdown</a> to see which track is right for you.<br/><br/>Starts next Wednesday, June 24th.<br/>",
     "pinned": {
-      "message": "FREE 10-week Live Webinar Training Program. <a href=\"https://www.flexrentalsolutions.com/flex-support/flex-training/training-course/\" target=\"_blank\" rel=\"noopener noreferrer\">Join us</a> every Wednesday for new training topics, now through August 26th. New sessions will be available to watch in Flex every week. Check out <a href=\"#\" class=\"rn-open-webinars\">Session 2: Inventory & Warehouse Operations and earlier sessions here</a>.",
+      "message": "FREE 10-week Live Webinar Training Program. <a href=\"https://www.flexrentalsolutions.com/flex-support/flex-training/training-course/\" target=\"_blank\" rel=\"noopener noreferrer\">Join us</a> every Wednesday for new training topics, now through August 26th. New sessions will be available to watch in Flex every week. Check out <a href=\"#\" class=\"rn-open-webinars\">Session 3: Quoting & Sales Workflow and earlier sessions here</a>.",
       "flag": "TWR-688"
     }
   },

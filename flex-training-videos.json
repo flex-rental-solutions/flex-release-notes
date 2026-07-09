@@ -45,10 +45,10 @@
   {
     "id": "session-3-quoting-sales-workflow",
     "title": "Session 3: Quoting & Sales Workflow",
-    "description": "Coming soon — building quotes, managing the sales pipeline, and converting proposals to orders.",
-    "youtubeId": "PLACEHOLDER_3",
-    "category": ["Sales", "Admin"],
-    "date": "2026-06-25"
+    "description": "Session 3 covers Quoting & Sales Workflow.\n\nTraining Topics:\n— Creating Quotes\n— Pricing (Pricing Models, Discounts, Sales Tax)\n— Availability-aware quoting\n— Converting Quotes to Pull Sheets\n— Customer management\n— Flag a Quote as ready to invoice\n\nOutcome:\nSales reps can efficiently generate accurate, professional quotes.",
+    "youtubeId": "tE0GmoNrsLg",
+    "category": ["Sales", "Admin", "Accounting"],
+    "date": "2026-07-08"
   },
   {
     "id": "session-4-order-execution-lifecycle",
