@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.16.2",
+    "date": "2026-07-15",
+    "notes": [
+      "Fix for an issue that caused an exception using Send To Client on element's without names."
+    ]
+  },
+  {
     "version": "1.16.1",
     "date": "2026-07-09",
     "notes": [
