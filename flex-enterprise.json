@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.16.3",
+    "date": "2026-07-16",
+    "notes": [
+      "Fix for an issue that caused an exception for Inventory Group Availability."
+    ]
+  },
+  {
     "version": "1.16.2",
     "date": "2026-07-15",
     "notes": [
