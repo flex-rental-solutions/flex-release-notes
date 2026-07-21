@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.16.5",
+    "date": "2026-07-21",
+    "notes": [
+      "Fix for the new report engine that caused an exception when using Arabic locales."
+    ]
+  },
+  {
     "version": "1.16.4",
     "date": "2026-07-17",
     "notes": [
@@ -23,6 +30,7 @@
   {
     "version": "1.16.1",
     "date": "2026-07-09",
+
     "notes": [
       "Various fixes and improvements for the new report engine."
     ]
