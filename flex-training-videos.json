@@ -51,20 +51,21 @@
     "date": "2026-07-08"
   },
   {
-    "id": "session-4-inventory-staffing-logistics",
-    "title": "Session 4: Inventory & Staffing Logistics",
-    "description": "Session 4 covers Inventory & Staffing Logistics.\n\nTraining Topics:\n— Labor, Purchase, and Rental POs\n— Transfer Orders\n— Staffing Assistant / Staffing Plus\n— Conflict Resolution\n— Receiving Inventory\n\nOutcome:\nUsers will be able to coordinate inventory movement, staffing logistics, purchasing, and conflict resolution more effectively throughout the rental process.",
+    "id": "session-4-order-execution-lifecycle",
+    "title": "Session 4: Order Execution & Lifecycle Management",
+    "description": "Session 4 covers Order Execution & Lifecycle Management.\n\nTraining Topics:\n— Packages\n— Project statuses, lifecycle stages\n— Editing active orders\n— Communication between sales & warehouse\n— Prep vs return workflows\n— Real-time updates & coordination\n\nOutcome:\nTeams understand how their actions affect downstream processes.",
     "youtubeId": "AboQ_kwJ61k",
     "category": ["Warehouse", "Sales", "Admin"],
     "date": "2026-07-15"
   },
   {
-    "id": "session-5-order-execution-lifecycle",
-    "title": "Session 5: Order Execution & Lifecycle Management",
-    "description": "Coming soon — managing orders from confirmation through delivery, scanning, and return.",
-    "youtubeId": "PLACEHOLDER_5",
-    "category": ["Warehouse", "Sales", "Admin"],
-    "date": "2026-06-25"
+    "id": "session-5-inventory-staffing-logistics",
+    "title": "Session 5: Inventory & Staffing Logistics",
+    "description": "In Week 5 of Flex's 10-week online training course, Nick covers Inventory & Staffing Logistics. This is a session that will be informative for all tracks.\n\nTraining Topics:\n— Labor, Purchase, and Rental POs\n— Transfer Orders\n— Staffing Assistant / Staffing Plus\n— Conflict Resolution\n— Receiving Inventory\n\nOutcome:\nUsers will be able to coordinate inventory movement, staffing logistics, purchasing, and conflict resolution more effectively throughout the rental process.",
+    "youtubeId": "4i4zsuvPs7A",
+    "category": ["Warehouse", "Sales", "Accounting", "Admin"],
+    "date": "2026-07-23",
+    "isNew": true
   },
   {
     "id": "session-6-invoicing-payments-accounting",
