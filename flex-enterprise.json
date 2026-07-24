@@ -1,5 +1,20 @@
 [
   {
+    "version": "1.16.8",
+    "date": "2026-07-24",
+    "notes": [
+      "Various fixes and improvements."
+    ]
+  },
+  {
+    "version": "1.16.7",
+    "date": "2026-07-23",
+    "notes": [
+      "Various fixes and improvements.",
+      "Fix for the new report engine that caused an exception with the Financial Document data producer."
+    ]
+  },
+  {
     "version": "1.16.6",
     "date": "2026-07-21",
     "notes": [
