@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.16.10",
+    "date": "2026-07-28",
+    "notes": [
+      "Fixes for the new report engine that caused unexpected mini-header behavior for the Default Equipment List."
+    ]
+  },
+  {
     "version": "1.16.9",
     "date": "2026-07-27",
     "notes": [
