@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.17.0",
+    "date": "2026-07-29",
+    "notes": [
+      "Small UI updates, code adjustments, and bug fixes."
+    ]
+  },
+  {
     "version": "1.16.10",
     "date": "2026-07-28",
     "notes": [
