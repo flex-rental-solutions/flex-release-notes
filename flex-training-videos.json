@@ -78,10 +78,11 @@
   {
     "id": "session-7-reporting-business-insights",
     "title": "Session 7: Reporting & Business Insights",
-    "description": "Coming soon — built-in reports, custom report building, and using dashboards to drive business decisions.",
-    "youtubeId": "PLACEHOLDER_7",
+    "description": "Week 7 of Flex's 10-week online training course covers Reporting & Business Insights. This session is primarily for Administrators but everyone will benefit.\n\nTraining Topics:\n— Standard reports (revenue, utilization, inventory)\n— Dashboards\n— Forecasting demand\n— Identifying underutilized inventory\n— Job cost analysis\n\nOutcome:\n— Leaders can make data-driven decisions.",
+    "youtubeId": "QEC2tN9D6aQ",
     "category": ["Sales", "Accounting", "Admin"],
-    "date": "2026-06-25"
+    "date": "2026-08-06",
+    "isNew": true
   },
   {
     "id": "session-8-system-configuration",
