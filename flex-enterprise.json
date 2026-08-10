@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.17.3",
+    "date": "2026-08-08",
+    "notes": [
+      "Performance improvements for Financial Document line item fetching."
+    ]
+  },
+  {
     "version": "1.17.2",
     "date": "2026-08-07",
     "notes": [
