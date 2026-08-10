@@ -1,5 +1,13 @@
 [
   {
+    "version": "Import inventory with ease",
+    "date": "2026-08-10",
+    "highlight": true,
+    "notes": [
+      "Import your inventory with ease — right inside Flex! No more waiting for assistance with large files or adding items one at a time. Use any CSV file, as is. No need to reformat or adjust your file beforehand. Automatically checks for proper formatting, duplicates, and invalid data. And lets you make corrections on the fly — so your inventory is live and ready to use in no time. <a class=\"flex-app-redirect\" href=\"#inventory-import/import\">Get started</a> today."
+    ]
+  },
+  {
     "version": "1.17.4",
     "date": "2026-08-10",
     "notes": [
