@@ -3,7 +3,8 @@
     "version": "1.17.4",
     "date": "2026-08-10",
     "notes": [
-      "Performance improvements for Equipment List line item fetching."
+      "Performance improvements for Equipment List line item fetching.",
+      "Various fixes and improvements."
     ]
   },
   {
