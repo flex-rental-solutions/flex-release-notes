@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.17.5",
+    "date": "2026-08-12",
+    "notes": [
+      "Fixed API access using JWT.",
+      "Other various fixes and improvements."
+    ]
+  },
+  {
     "version": "highlight: Inventory Import",
     "date": "2026-08-10",
     "highlight": true,
