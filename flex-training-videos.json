@@ -80,16 +80,16 @@
     "description": "Week 7 of Flex's 10-week online training course covers Reporting & Business Insights. This session is primarily for Administrators but everyone will benefit.\n\nTraining Topics:\n— Standard reports (revenue, utilization, inventory)\n— Dashboards\n— Forecasting demand\n— Identifying underutilized inventory\n— Job cost analysis\n\nOutcome:\n— Leaders can make data-driven decisions.",
     "youtubeId": "QEC2tN9D6aQ",
     "category": ["Sales", "Accounting", "Admin"],
-    "date": "2026-08-06",
-    "isNew": true
+    "date": "2026-08-06"
   },
   {
     "id": "session-8-system-configuration",
     "title": "Session 8: System Configuration & Administration",
-    "description": "Coming soon — configuring Flex for your organization, managing settings, and system administration.",
-    "youtubeId": "PLACEHOLDER_8",
+    "description": "Session 8 covers System Configuration & Administration. The primary audience is Administrators\n\nTraining Topics:\n— User roles & permissions setup\n— Custom fields\n— Workflows\n— Pricing Models\n— System settings & best practices\n\nOutcome:\n— Admins can tailor the system to their business needs.",
+    "youtubeId": "cUGLHrt4Irs",
     "category": ["Admin"],
-    "date": "2026-06-25"
+    "date": "2026-08-13",
+    "isNew": true
   },
   {
     "id": "session-9-advanced-configuration",
