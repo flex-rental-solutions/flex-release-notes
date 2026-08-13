@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.17.6",
+    "date": "2026-08-13",
+    "notes": [
+      "Fixed image access under a new security condition."
+    ]
+  },
+  {
     "version": "1.17.5",
     "date": "2026-08-12",
     "notes": [
