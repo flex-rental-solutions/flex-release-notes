@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.17.7",
+    "date": "2026-08-14",
+    "notes": [
+      "Various fixes and improvements."
+    ]
+  },
+  {
     "version": "1.17.6",
     "date": "2026-08-13",
     "notes": [
