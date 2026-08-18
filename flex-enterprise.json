@@ -9,7 +9,7 @@
   },
   {
     "version": "1.17.9",
-    "date": "2026-08-14",
+    "date": "2026-08-18",
     "notes": [
       "Fix for an issue that caused unexpected Status properties to apply during various element copying processes.",
       "Other fixes and improvements."
