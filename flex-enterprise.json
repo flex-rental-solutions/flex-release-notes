@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.18.0",
+    "date": "2026-08-19",
+    "notes": [
+      "Added Checkbox to \"Permanent\" column to quickly select or deselect all lines in Content Builder.",
+      "Changed substitute scanning to remain open until full quantity is fulfilled."
+    ]
+  },
+  {
     "version": "1.17.7",
     "date": "2026-08-14",
     "notes": [
