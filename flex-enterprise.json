@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.18.2",
+    "date": "2026-08-20",
+    "notes": [
+      "Various fixes and improvements."
+    ]
+  },
+  {
+    "version": "1.18.1",
+    "date": "2026-08-20",
+    "notes": [
+      "Internal changes to help us identify errors more quickly."
+    ]
+  },
+  {
     "version": "1.18.0",
     "date": "2026-08-19",
     "notes": [
