@@ -88,16 +88,16 @@
     "description": "Session 8 covers System Configuration & Administration. The primary audience is Administrators\n\nTraining Topics:\n— User roles & permissions setup\n— Custom fields\n— Workflows\n— Pricing Models\n— System settings & best practices\n\nOutcome:\n— Admins can tailor the system to their business needs.",
     "youtubeId": "cUGLHrt4Irs",
     "category": ["Admin"],
-    "date": "2026-08-13",
-    "isNew": true
+    "date": "2026-08-13"
   },
   {
     "id": "session-9-advanced-configuration",
     "title": "Session 9: Advanced System Configuration",
-    "description": "Coming soon — advanced configuration topics, custom fields, integrations, and power-user settings.",
-    "youtubeId": "PLACEHOLDER_9",
+    "description": "In our penultimate 9th session, Nick covers Advanced System Configuration.\n\nTraining Topics:\n— Element Definitions deep dive\n— Inventory Settings\n— Workflows (continued)\n— Tiered Pricing Models\n\nOutcome:\n— Admins can tailor the system to their business needs.",
+    "youtubeId": "BfQbi63R1VQ",
     "category": ["Admin"],
-    "date": "2026-06-25"
+    "date": "2026-08-20",
+    "isNew": true
   },
   {
     "id": "session-10-rfid-concluding-qa",
