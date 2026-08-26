@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.19.0",
+    "date": "2026-08-26",
+    "notes": [
+      "Added an option to \"Include Field Settings\" in the header of Default Equipment List reports.",
+      "Added a <a href=\"https://helpcenter.flexrentalsolutions.com/hc/en-us/articles/360054924294-Prepping-a-Pull-Sheet#h_01M0X2W72BD8BMFWV8CZ1GV153:~:text=Scan%20Out%22%20Option-,Scan%20to%20Group,-Substituting%20a%20Line\" target=\"_blank\" rel=\"noopener noreferrer\">Scan to Group</a> option in Prep scanning, allowing users to select a group and focus subsequent scans on its lines.",
+      "Added a \"Move Contents\" option in Content Builder, allowing users to quickly move selected items to another unit container.",
+      "Added a prompt when scanning a unit into a container that is currently scanned out, giving users the option to Cancel or proceed with the scan.",
+      "Adjusted equipment list updates to now preserve Notes entered.",
+      "Fixed an issue where line items were jumping around on elements."
+    ]
+  },
+  {
     "version": "1.18.4",
     "date": "2026-08-26",
     "notes": [
