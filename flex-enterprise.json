@@ -12,6 +12,14 @@
     ]
   },
   {
+    "version": "1.18.4",
+    "date": "2026-08-26",
+    "notes": [
+      "Fix for the new report engine that caused some reports to fail due to their size.",
+      "Other fixes and improvements."
+    ]
+  },
+  {
     "version": "1.18.3",
     "date": "2026-08-21",
     "notes": [
