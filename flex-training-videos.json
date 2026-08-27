@@ -96,15 +96,15 @@
     "description": "In our penultimate 9th session, Nick covers Advanced System Configuration.\n\nTraining Topics:\n— Element Definitions deep dive\n— Inventory Settings\n— Workflows (continued)\n— Tiered Pricing Models\n\nOutcome:\n— Admins can tailor the system to their business needs.",
     "youtubeId": "BfQbi63R1VQ",
     "category": ["Admin"],
-    "date": "2026-08-20",
-    "isNew": true
+    "date": "2026-08-20"
   },
   {
     "id": "session-10-rfid-concluding-qa",
     "title": "Session 10: RFID & Concluding Q&A",
-    "description": "Coming soon — RFID setup and workflows, plus a live Q&A wrapping up the 10-week training series.",
-    "youtubeId": "PLACEHOLDER_10",
+    "description": "In the last session of the series, Flex CEO Chris Stein joins us and covers the topic of RFID.\n\nTraining Topics:\n— RFID\n— Common mistakes & how to avoid them\n— Efficiency tips & shortcuts\n\nOutcome:\n— Users understand how to successfully implement RFID for streamlined warehouse operations.",
+    "youtubeId": "9c2hU4WvR_I",
     "category": ["Warehouse", "Admin"],
-    "date": "2026-06-25"
+    "date": "2026-08-27",
+    "isNew": true
   }
 ]
