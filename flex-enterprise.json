@@ -1,5 +1,27 @@
 [
   {
+    "version": "1.19.3",
+    "date": "2026-09-01",
+    "notes": [
+      "Fix for an issue that caused unexpected client insurance warnings on downstream elements."
+    ]
+  },
+  {
+    "version": "1.19.2",
+    "date": "2026-08-28",
+    "notes": [
+      "Fix for an issue what caused the enter key to send a Workflow Email prematurely.",
+      "Fix for an issue that caused nested lines not to appear is certain situations."
+    ]
+  },
+  {
+    "version": "1.19.1",
+    "date": "2026-08-27",
+    "notes": [
+      "Fix for an issue that caused unrelated information to appear in Staffing Outreach emails."
+    ]
+  },
+  {
     "version": "1.19.0",
     "date": "2026-08-26",
     "notes": [
