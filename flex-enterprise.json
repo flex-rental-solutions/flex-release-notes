@@ -10,7 +10,7 @@
     "version": "1.19.2",
     "date": "2026-08-28",
     "notes": [
-      "Fix for an issue what caused the enter key to send a Workflow Email prematurely.",
+      "Fix for an issue that caused the enter key to send a Workflow Email prematurely.",
       "Fix for an issue that caused nested lines not to appear is certain situations."
     ]
   },
