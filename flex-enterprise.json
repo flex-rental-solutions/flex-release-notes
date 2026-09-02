@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.19.4",
+    "date": "2026-09-02",
+    "notes": [
+      "Fix for the new report engine that allowed deleted elements to appear in batch print results."
+    ]
+  },
+  {
     "version": "1.19.3",
     "date": "2026-09-01",
     "notes": [
