@@ -1,9 +1,17 @@
 [
   {
-    "version": "1.19.4",
+    "version": "1.19.5",
     "date": "2026-09-02",
     "notes": [
-      "Fix for the new report engine that allowed deleted elements to appear in batch print results."
+      "Fix for the new report engine that allowed deleted elements to appear in batch print results.",
+      "Fix for an issue that caused unexpected client insurance warnings on manifests."
+    ]
+  },
+  {
+    "version": "1.19.4",
+    "date": "2026-09-01",
+    "notes": [
+      "Fix for an issue with Inventory Imports incorrectly showing a failure while importing a large file."
     ]
   },
   {
