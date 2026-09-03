@@ -1,5 +1,21 @@
 [
   {
+    "version": "1.19.7",
+    "date": "2026-09-03",
+    "notes": [
+      "Fix for an issue that caused lines to sort incorrectly when added to the 'Update Paperwork' target elements.",
+      "Fix for an issue that caused substituted lines not to update on child elements during a workflow element generator job."
+    ]
+  },
+  {
+    "version": "1.19.6",
+    "date": "2026-09-02",
+    "notes": [
+      "Fix for the new report engine that allowed deleted elements to appear in batch print results.",
+      "Fix for an issue that caused scan to group to behave incorrectly when many line items were present."
+    ]
+  },
+  {
     "version": "1.19.5",
     "date": "2026-09-02",
     "notes": [
