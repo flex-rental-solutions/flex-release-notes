@@ -1,9 +1,16 @@
 [ 
   {
-    "version": "1.19.10",
+    "version": "1.19.11",
     "date": "2026-09-09",
     "notes": [
       "Fixed an issue that caused an error when rearranging elements in tree."
+    ]
+  },
+  {
+    "version": "1.19.10",
+    "date": "2026-09-08",
+    "notes": [
+      "Fixed an issue that caused free pick containers to not open as expected during scanning."
     ]
   },
   {
