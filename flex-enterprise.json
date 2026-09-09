@@ -1,4 +1,11 @@
-[
+[ 
+  {
+    "version": "1.19.10",
+    "date": "2026-09-09",
+    "notes": [
+      "Fixed an issue that caused an error when rearranging elements in tree."
+    ]
+  },
   {
     "version": "1.19.9",
     "date": "2026-09-08",
