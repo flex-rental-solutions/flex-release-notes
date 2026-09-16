@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.20.0",
+    "date": "2026-09-17",
+    "notes": [
+      "Added the ability to bulk-update dates across all elements in an Element Tree.",
+      "Added ability to enable viewing element statuses in an Element Tree.",
+      "Added the ability to view and download maintenance images.",
+      "Added gear icon on project list screens to bring directly to Search Options for changes.",
+      "Added the ‘Barcode Cheat Sheet’ report to the new report engine.",
+      "Changed the inventory audit trail to retain all Modification records.",
+      "Changed inventory audit trail \"Resource Modified\" to be more descriptive, including field name and before/after values.",
+      "Changed inventory audit trail to include Presumed Missing and Sold events."
+    ]
+  },
+  {
     "version": "1.19.0",
     "date": "2026-08-26",
     "notes": [
