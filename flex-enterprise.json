@@ -1,5 +1,12 @@
 [ 
   {
+    "version": "1.20.1",
+    "date": "2026-09-22",
+    "notes": [
+      "Fix for an issue that caused newly created Automated Functions to store incorrect parameters."
+    ]
+  },
+  {
     "version": "1.20.0",
     "date": "2026-09-17",
     "notes": [
