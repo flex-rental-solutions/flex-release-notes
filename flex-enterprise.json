@@ -10,7 +10,8 @@
     "version": "1.20.1",
     "date": "2026-09-22",
     "notes": [
-      "Fix for an issue that caused newly created Automated Functions to store incorrect parameters."
+      "Fix for an issue that caused newly created Automated Functions to store incorrect parameters.",
+      "Fix for the new report engine that caused all-character currency symbols not to have a space after them."
     ]
   },
   {
