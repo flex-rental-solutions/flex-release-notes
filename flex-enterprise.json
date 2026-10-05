@@ -1,7 +1,7 @@
 [ 
   {
     "version": "1.20.4",
-    "date": "2026-09-24",
+    "date": "2026-10-05",
     "notes": [
       "Fix for an issue that caused Email Financial Document workflow jobs to fail with certain configurations.",
       "Fix for an issue that caused Pull Sheets not to generate when Free Text was used as an Address Source.",
