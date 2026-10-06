@@ -1,5 +1,12 @@
 [ 
   {
+    "version": "1.20.5",
+    "date": "2026-10-06",
+    "notes": [
+      "Fix for an issue that caused the Choose From Free Scan Out grid fetch to timeout for some customers."
+    ]
+  },
+  {
     "version": "1.20.4",
     "date": "2026-10-05",
     "notes": [
