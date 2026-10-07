@@ -1,5 +1,38 @@
 [ 
   {
+    "version": "1.21.0",
+    "date": "2026-10-07",
+    "notes": [
+      "Updated to a more modern UI, aligning with brand colors and making font easier to read.",
+      "Added the ability to generate a PayEngine payment link outside of email.",
+      "Added the ability for users to pin a default tab across elements.",
+      "Added the ability to quickly add contacts from an element’s Contact/Address Blocks.",
+      "Added the ability to preview and override the default filename when downloading reports.",
+      "Added the ability to configure header block columns for Equipment Lists from the Views tab in the element definition settings. When the new report engine is enabled, default views match the current report layout, so reports stay the same.",
+      "Added the ability to update Quantity Owned for existing non-serialized models during inventory model imports.",
+      "Added the ability to view a nested container's contents in the parent container's Contents list.",
+      "Added a prompt when scanning a free pick container while free pick mode is opened for another container.",
+      "Added the ability to partially resolve <a href=\"https://helpcenter.flexrentalsolutions.com/hc/en-us/articles/44018366470807-Marking-and-Resolving-Non-Serialized-Quantities-as-Out-of-Commission\" target=\"_blank\" rel=\"noopener noreferrer\">non-serialized Out of Commission quantities</a>.",
+      "Added the ability to <a href=\"https://helpcenter.flexrentalsolutions.com/hc/en-us/articles/44031173549463-Adding-Unavailable-Time-to-Contact-Schedules\" target=\"_blank\" rel=\"noopener noreferrer\">create Unavailable events</a> on contact schedules. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> only)",
+      "Added Sent By, Call Start, and Call End columns to the Inquiries/Offers grids. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> only)",
+      "Added an \"Open Free Pick\" option to the Prep Manifest tab's \"...\" menu.",
+      "Added a read-only Default Currency field to the Operations section of the user record, showing which currency is used for rendering purposes.",
+      "Adjusted PayEngine webhook to read Failed and Refunded statuses on the Transactions tab.",
+      "Adjusted PayEngine Transactions tab to include column to calculate age of unpaid links and changed the filter type on Payment Status column.",
+      "Adjusted the Home page default to follow new pinning style of element tabs.",
+      "Adjusted the inventory search to include Tags, match search terms in any order, and add opened results to Recent History.",
+      "Adjusted the Audit Trail to be paginated.",
+      "Fixed an issue that caused an error when deleting a line off of a Pullsheet from the Manifest.",
+      "Fixed an issue that prevented the Past Due tab from loading, and other performance improvements.",
+      "Fixed an issue where the Root Element Name field type displayed the name of another element when no root element existed.",
+      "Small UI updates, code adjustments, and bug fixes."
+    ],
+    "pinned": {
+      "message": "The 2027 Flex Awards are for the people behind the show, the ones who keep gear moving and chaos under control. It only takes a couple of minutes to recognize someone who deserves it. <a href=\"https://www.flexrentalsolutions.com/2027-flex-awards-nominations/#Nomination\" target=\"_blank\" rel=\"noopener noreferrer\">Nominate someone today.</a>",
+      "flag": "flex-awards-2026"
+    }
+  },
+  {
     "version": "1.20.5",
     "date": "2026-10-06",
     "notes": [
