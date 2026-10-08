@@ -23,9 +23,7 @@
       "Adjusted the inventory search to include Tags, match search terms in any order, and add opened results to Recent History.",
       "Adjusted the Audit Trail to be paginated.",
       "Fixed an issue that caused an error when deleting a line off of a Pullsheet from the Manifest.",
-      "Fixed an issue that prevented the Past Due tab from loading, and other performance improvements.",
-      "Fixed an issue where the Root Element Name field type displayed the name of another element when no root element existed.",
-      "Small UI updates, code adjustments, and bug fixes."
+      "Fixed an issue where the Root Element Name field type displayed the name of another element when no root element existed."
     ],
     "pinned": {
       "message": "The 2027 Flex Awards are for the people behind the show, the ones who keep gear moving and chaos under control. It only takes a couple of minutes to recognize someone who deserves it. <a href=\"https://www.flexrentalsolutions.com/2027-flex-awards-nominations/#Nomination\" target=\"_blank\" rel=\"noopener noreferrer\">Nominate someone today.</a>",
