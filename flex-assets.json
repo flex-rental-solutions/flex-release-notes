@@ -8,8 +8,7 @@
       "Added the ability to partially resolve <a href=\"https://helpcenter.flexrentalsolutions.com/hc/en-us/articles/44018366470807-Marking-and-Resolving-Non-Serialized-Quantities-as-Out-of-Commission\" target=\"_blank\" rel=\"noopener noreferrer\">non-serialized Out of Commission quantities</a>.",
       "Adjusted the Home page default to follow new pinning style of element tabs.",
       "Adjusted the inventory search to include Tags, match search terms in any order, and add opened results to Recent History.",
-      "Adjusted the Audit Trail to be paginated.",
-      "Small UI updates, code adjustments, and bug fixes."
+      "Adjusted the Audit Trail to be paginated."
     ],
     "pinned": {
       "flag": "flex-awards-2026",
