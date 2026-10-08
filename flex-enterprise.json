@@ -1,5 +1,13 @@
 [ 
   {
+    "version": "1.21.1",
+    "date": "2026-10-08",
+    "notes": [
+      "Fix for an issue that caused Serial Unit Current Location lookups to be non-performant.",
+      "Other fixes and improvements."
+    ]
+  },
+  {
     "version": "1.21.0",
     "date": "2026-10-07",
     "notes": [
