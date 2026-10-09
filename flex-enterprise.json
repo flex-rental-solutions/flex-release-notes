@@ -1,5 +1,19 @@
 [ 
   {
+    "version": "1.21.3",
+    "date": "2026-10-09",
+    "notes": [
+      "Fix for an issue that caused Workflow emails with reports to fail or produce unexpected results in some cases."
+    ]
+  },
+  {
+    "version": "1.21.2",
+    "date": "2026-10-08",
+    "notes": [
+      "Various fixes and improvements."
+    ]
+  },
+  {
     "version": "1.21.1",
     "date": "2026-10-08",
     "notes": [
