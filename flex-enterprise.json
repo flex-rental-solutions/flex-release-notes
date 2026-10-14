@@ -3,7 +3,9 @@
     "version": "1.21.4",
     "date": "2026-10-14",
     "notes": [
-      "Fix for the new report engine that caused 0-quantity inventory lines to not show the quantity."
+      "Fix for the new report engine that caused 0-quantity inventory lines to not show the quantity.",
+      "Fixed an issue where the Barcode column was blank for Out of Commission records in the Audit Trail.",
+      "Fixed an issue that prevented the Past Due tab from loading, and other various improvements."
     ]
   },
   {
@@ -20,7 +22,6 @@
     "version": "1.21.2",
     "date": "2026-10-08",
     "notes": [
-      "Various fixes and improvements.",
       "Fix for the new report engine when processing aggregation reports configured in the Report Stack."
     ]
   },
@@ -29,8 +30,7 @@
     "date": "2026-10-08",
     "notes": [
       "Fix for an issue that caused Serial Unit Current Location lookups to be non-performant.",
-      "Fix for the new report engine that caused Total Block values to wrap when using the Default Financial Document.",
-      "Other fixes and improvements."
+      "Fix for the new report engine that caused Total Block values to wrap when using the Default Financial Document."
     ]
   },
   {
