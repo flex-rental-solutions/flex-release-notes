@@ -1,16 +1,27 @@
 [ 
   {
+    "version": "1.21.4",
+    "date": "2026-10-14",
+    "notes": [
+      "Fix for the new report engine that caused 0-quantity inventory lines to not show the quantity."
+    ]
+  },
+  {
     "version": "1.21.3",
     "date": "2026-10-09",
     "notes": [
-      "Fix for an issue that caused Workflow emails with reports to fail or produce unexpected results in some cases."
+      "Fix for an issue that caused Workflow emails with reports to fail or produce unexpected results in some cases.",
+      "Fix for an issue that caused users to be unable to choose any inventory item as a substitute in conflict resolution.",
+      "Fix for an issue that caused conflict resolution via supplier or transfer to fail in certain cases.",
+      "Fix for the new report engine that caused unexpected line splitting at the end of a page when using the 'default' reports."
     ]
   },
   {
     "version": "1.21.2",
     "date": "2026-10-08",
     "notes": [
-      "Various fixes and improvements."
+      "Various fixes and improvements.",
+      "Fix for the new report engine when processing aggregation reports configured in the Report Stack."
     ]
   },
   {
@@ -18,6 +29,7 @@
     "date": "2026-10-08",
     "notes": [
       "Fix for an issue that caused Serial Unit Current Location lookups to be non-performant.",
+      "Fix for the new report engine that caused Total Block values to wrap when using the Default Financial Document.",
       "Other fixes and improvements."
     ]
   },
