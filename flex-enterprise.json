@@ -1,7 +1,7 @@
 [
   {
     "version": "1.21.1",
-    "date": "2026-10-15",
+    "date": "2026-10-16",
     "notes": [
       "Fix for an issue that caused tooltips to cover items in the element tree.",
       "Barcode Cheat Sheets now always use the new report engine for previews and PDFs.",
