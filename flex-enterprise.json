@@ -1,5 +1,12 @@
 [ 
   {
+    "version": "1.21.5",
+    "date": "2026-10-15",
+    "notes": [
+      "Fix for an issue that caused Workflow not to complete when a Report Email Notification job does not have a report configured."
+    ]
+  },
+  {
     "version": "1.21.4",
     "date": "2026-10-14",
     "notes": [
