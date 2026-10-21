@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.21.2",
+    "date": "2026-10-21",
+    "notes": [
+      "Fix for an issue that caused dates around Daylight Saving Time boundaries to render incorrectly in some browsers."
+    ]
+  },
+  {
     "version": "1.21.1",
     "date": "2026-10-16",
     "notes": [
