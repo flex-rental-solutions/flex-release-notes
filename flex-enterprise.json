@@ -1,14 +1,5 @@
 [
   {
-    "version": "1.21.1",
-    "date": "2026-10-16",
-    "notes": [
-      "Fix for an issue that caused tooltips to cover items in the element tree.",
-      "Barcode Cheat Sheets now always use the new report engine for previews and PDFs.",
-      "Fix for an issue that caused an error when loading the workbench before the default location had finished loading."
-    ]
-  },
-  {
     "version": "1.21.5",
     "date": "2026-10-15",
     "notes": [
@@ -38,7 +29,8 @@
     "version": "1.21.2",
     "date": "2026-10-08",
     "notes": [
-      "Fix for the new report engine when processing aggregation reports configured in the Report Stack."
+      "Fix for the new report engine when processing aggregation reports configured in the Report Stack.",
+      "Fix for an issue that caused dates around Daylight Saving Time boundaries to render incorrectly in some browsers."
     ]
   },
   {
@@ -46,7 +38,10 @@
     "date": "2026-10-08",
     "notes": [
       "Fix for an issue that caused Serial Unit Current Location lookups to be non-performant.",
-      "Fix for the new report engine that caused Total Block values to wrap when using the Default Financial Document."
+      "Fix for the new report engine that caused Total Block values to wrap when using the Default Financial Document.",
+      "Fix for an issue that caused tooltips to cover items in the element tree.",
+      "Barcode Cheat Sheets now always use the new report engine for previews and PDFs.",
+      "Fix for an issue that caused an error when loading the workbench before the default location had finished loading."
     ]
   },
   {
