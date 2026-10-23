@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.22.0",
+    "date": "2026-10-29",
+    "notes": [
+      "Internal test note. Remove when complete"
+    ],
+    "announcement": "<div class=\"rn-dark-mode-note\"><span class=\"rn-dark-mode-text\">Added support for dark mode.</span><span class=\"rn-dark-mode-spotlight\" aria-hidden=\"true\">Added support for dark mode.</span><button type=\"button\" class=\"rn-theme-toggle\" aria-label=\"Switch to dark mode\" aria-pressed=\"false\"><i class=\"fas fa-moon\" aria-hidden=\"true\"></i></button></div>"
+  },
+  {
     "version": "1.21.8",
     "date": "2026-10-22",
     "notes": [
