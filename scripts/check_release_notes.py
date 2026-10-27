@@ -23,6 +23,7 @@ ENTRY_VALIDATOR = Draft202012Validator(
 class JsonObject(dict):
     def __init__(self, pairs):
         super().__init__(pairs)
+        self.pairs = pairs
         self.duplicates = [key for key, count in Counter(k for k, _ in pairs).items() for _ in range(count - 1)]
 
 
@@ -30,11 +31,22 @@ def duplicate_keys(value, path='$'):
     if isinstance(value, JsonObject):
         for key in value.duplicates:
             yield f'{path}.{key}'
-        for key, child in value.items():
+        for key, child in value.pairs:
             yield from duplicate_keys(child, f'{path}.{key}')
     elif isinstance(value, list):
         for index, child in enumerate(value):
             yield from duplicate_keys(child, f'{path}[{index}]')
+
+
+def content_identity(value):
+    if isinstance(value, JsonObject):
+        occurrences = {}
+        for key, child in value.pairs:
+            occurrences.setdefault(key, []).append(content_identity(child))
+        return occurrences
+    if isinstance(value, list):
+        return [content_identity(child) for child in value]
+    return (type(value), value)
 
 
 def parse(source):
@@ -85,32 +97,31 @@ def main():
             ).stdout
             before = parse(base_text)
             after = parse(Path(filename).read_text(encoding='utf-8'))
+            before_identities = [content_identity(entry) for entry in before]
+            after_identities = [content_identity(entry) for entry in after]
             print(f'\n=== {filename} ===')
             errors.extend(f'{filename}: {error}' for error in schema_errors(VALIDATOR, after))
             baseline_duplicates = list(duplicate_keys(before))
             if baseline_duplicates:
                 print('Baseline duplicate-key warnings: ' + ', '.join(baseline_duplicates))
-            # Inserting at the top shifts history. Compare values and duplicate keys,
-            # treating unchanged historical duplicates as warnings rather than errors.
-            changed = [entry for entry in after if not any(
-                entry == old and list(duplicate_keys(entry)) == list(duplicate_keys(old))
-                for old in before
-            )]
+            # Ignore ordinary object-key order but retain every duplicate occurrence.
+            changed = [entry for entry, identity in zip(after, after_identities)
+                       if identity not in before_identities]
             for entry in changed:
                 version = entry.get('version')
                 errors.extend(f'{filename} {version}: {error}' for error in validate_entry(entry))
                 if sum(item.get('version') == version for item in after) > 1:
                     errors.append(f'{filename}: duplicate changed version {version}')
                 preview(f'Proposed {version} ({entry.get("date")})', entry)
-            for entry in before:
-                if entry not in after:
+            for entry, identity in zip(before, before_identities):
+                if identity not in after_identities:
                     preview('Previous content removed or replaced', entry)
             # Reject extra copies even when they compare equal to an old entry.
-            for entry in after:
-                if after.count(entry) > max(1, before.count(entry)):
+            for entry, identity in zip(after, after_identities):
+                if after_identities.count(identity) > max(1, before_identities.count(identity)):
                     errors.append(f'{filename}: added duplicate entry {entry.get("version")}')
                     break
-            if not changed and before == after:
+            if not changed and before_identities == after_identities:
                 print('No content changes.')
             elif not changed:
                 print('No new/edited entries; inspect removals or ordering in git diff.')

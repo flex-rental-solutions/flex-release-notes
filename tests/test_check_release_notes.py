@@ -76,6 +76,26 @@ class ReleaseCheckerTest(unittest.TestCase):
         self.new.update(version='highlight-training-2026',highlight=True,title='Training')
         self.assertEqual(self.run_check().returncode,0)
 
+    def test_edit_to_shadowed_duplicate_value_fails(self):
+        for shadowed, replacement in (('"earlier"', '"edited"'),
+                                      ('{"value":"earlier","value":"kept"}', '{"value":"edited","value":"kept"}'),
+                                      ('true', '1')):
+            with self.subTest(shadowed=shadowed):
+                raw='[{"version":"1.22.0","date":"2026-10-29","notes":[],"pinned":{"flag":' + shadowed + ',"flag":"effective","message":"Hello"}}]'
+                for name in ('flex-enterprise.json','flex-assets.json'):
+                    (self.root/name).write_text(raw)
+                subprocess.run(['git','add','.'],cwd=self.root,check=True)
+                subprocess.run(['git','-c','user.name=Test','-c','user.email=test@example.invalid',
+                                'commit','-qm','historical duplicate values'],cwd=self.root,check=True)
+                unchanged=self.run_check(raw)
+                self.assertEqual(unchanged.returncode,0,unchanged.stderr)
+                reordered=self.run_check(raw.replace('"version":"1.22.0","date":"2026-10-29"',
+                                                    '"date":"2026-10-29","version":"1.22.0"'))
+                self.assertEqual(reordered.returncode,0,reordered.stderr)
+                edited=self.run_check(raw.replace(shadowed,replacement,1))
+                self.assertNotEqual(edited.returncode,0,edited.stdout)
+                self.assertIn('duplicate key $.pinned.flag',edited.stderr)
+
     def test_baseline_duplicate_is_warning_but_changed_duplicate_fails(self):
         raw='[{"version":"1.22.0","date":"2026-10-29","notes":[],"pinned":{"flag":"known","flag":"known","message":"Hello"}}]'
         for name in ('flex-enterprise.json','flex-assets.json'):
