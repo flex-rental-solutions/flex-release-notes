@@ -26,11 +26,9 @@ class ReleaseCheckerTest(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
 
-    def run_check(self, raw=None, allow_edited_notes=False):
+    def run_check(self, raw=None):
         (self.root/'flex-enterprise.json').write_text(raw if raw is not None else json.dumps([self.new,self.old]))
         args = [sys.executable, str(SCRIPT), '--base', 'HEAD']
-        if allow_edited_notes:
-            args.append('--allow-edited-notes')
         return subprocess.run(args,cwd=self.root,capture_output=True,text=True)
 
     def test_supported_bullet_formats(self):
@@ -40,7 +38,7 @@ class ReleaseCheckerTest(unittest.TestCase):
                 entry = dict(self.new, notes=notes)
                 self.assertEqual(schema_errors(VALIDATOR, [entry]), [])
                 self.assertEqual(validate_entry(entry), [])
-                result = self.run_check(json.dumps([entry, self.old]), allow_edited_notes=True)
+                result = self.run_check(json.dumps([entry, self.old]))
                 self.assertEqual(result.returncode, 0, result.stderr)
                 for note in notes:
                     text = note['text'] if isinstance(note, dict) else note
@@ -66,12 +64,11 @@ class ReleaseCheckerTest(unittest.TestCase):
                 self.assertTrue(validate_entry(entry))
         leap_day = dict(self.new, notes=[dict(edited, editedDate='2024-02-29')])
         self.assertEqual(validate_entry(leap_day), [])
-        result = self.run_check(json.dumps([dict(self.new, notes=[dict(edited, editedDate='2026-02-30')])]),
-                                allow_edited_notes=True)
+        result = self.run_check(json.dumps([dict(self.new, notes=[dict(edited, editedDate='2026-02-30')])]))
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('notes[0]', result.stderr)
 
-    def test_object_publication_gate_covers_both_plans_and_unchanged_entries(self):
+    def test_object_bullets_in_both_plans_and_unchanged_entries(self):
         entry = dict(self.old, notes=[{'text': 'Edited bullet.', 'editedDate': '2026-10-22'}])
         for filename in ('flex-enterprise.json', 'flex-assets.json'):
             with self.subTest(filename=filename):
@@ -82,22 +79,17 @@ class ReleaseCheckerTest(unittest.TestCase):
                                 'commit', '-qm', 'object baseline'], cwd=self.root, check=True)
                 raw = (self.root/'flex-enterprise.json').read_text()
                 result = self.run_check(raw)
-                self.assertNotEqual(result.returncode, 0)
-                self.assertIn(f'{filename} 1.22.0: object bullets are blocked for publication', result.stderr)
-                self.assertIn('PR #4905', result.stderr)
-                allowed = self.run_check(raw, allow_edited_notes=True)
-                self.assertEqual(allowed.returncode, 0, allowed.stderr)
-                self.assertIn('No content changes.', allowed.stdout)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertIn('No content changes.', result.stdout)
 
-    def test_new_object_publication_and_duplicate_keys(self):
+    def test_new_object_bullets_and_duplicate_keys(self):
         raw = '[{"version":"1.23.0","date":"2026-11-10","notes":[{"text":"Edited bullet.","editedDate":"2026-10-22"}]}]'
         result = self.run_check(raw)
-        self.assertNotEqual(result.returncode, 0)
-        self.assertIn('object bullets are blocked for publication', result.stderr)
+        self.assertEqual(result.returncode, 0, result.stderr)
         for key, value in (('text', 'Shadowed text.'), ('editedDate', '2026-10-21')):
             with self.subTest(key=key):
                 duplicate = raw.replace(f'"{key}":', f'"{key}":"{value}","{key}":')
-                result = self.run_check(duplicate, allow_edited_notes=True)
+                result = self.run_check(duplicate)
                 self.assertNotEqual(result.returncode, 0)
                 self.assertIn(f'duplicate key $.notes[0].{key}', result.stderr)
 

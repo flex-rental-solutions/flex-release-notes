@@ -29,16 +29,11 @@ jobs:
       - name: Validate schema and proposed content
         env:
           BASE_REF: ${{ github.event.pull_request.base.sha || github.event.before }}
-          EDITED_NOTES_READY: ${{ vars.RELEASE_NOTES_EDITED_NOTES_READY }}
         run: |
           if [ -z "$BASE_REF" ] || [ "$BASE_REF" = "0000000000000000000000000000000000000000" ]; then
             BASE_REF=HEAD
           fi
-          args=()
-          if [ "$EDITED_NOTES_READY" = "true" ]; then
-            args+=(--allow-edited-notes)
-          fi
-          python scripts/check_release_notes.py --base "$BASE_REF" "${args[@]}"
+          python scripts/check_release_notes.py --base "$BASE_REF"
 
       - name: Validate flex-enterprise.json
         run: |

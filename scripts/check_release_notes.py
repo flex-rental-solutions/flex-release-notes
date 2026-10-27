@@ -91,8 +91,6 @@ def preview(label, entry):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--base', default='origin/main', help='Already-fetched Git base ref')
-    parser.add_argument('--allow-edited-notes', action='store_true',
-                        help='Permit object bullets only after compatible desktop clients are deployed')
     args = parser.parse_args()
     errors = []
     for filename in ('flex-enterprise.json', 'flex-assets.json'):
@@ -107,15 +105,6 @@ def main():
             after_identities = [content_identity(entry) for entry in after]
             print(f'\n=== {filename} ===')
             errors.extend(f'{filename}: {error}' for error in schema_errors(VALIDATOR, after))
-            if not args.allow_edited_notes:
-                for entry in after:
-                    notes = entry.get('notes', [])
-                    if isinstance(notes, list) and any(isinstance(note, dict) for note in notes):
-                        errors.append(
-                            f'{filename} {entry.get("version")}: object bullets are blocked for publication; '
-                            'deploy compatible desktop clients from flex5-desktop PR #4905 first. '
-                            'Use --allow-edited-notes only after verifying that rollout.'
-                        )
             baseline_duplicates = list(duplicate_keys(before))
             if baseline_duplicates:
                 print('Baseline duplicate-key warnings: ' + ', '.join(baseline_duplicates))

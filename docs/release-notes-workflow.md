@@ -44,12 +44,7 @@ The docs show pins as arrays, while existing content also uses objects; both are
 
 This contract comes from [flex5-desktop PR #4905](https://github.com/flex-rental-solutions/flex5-desktop/pull/4905). **Deploy the compatible UI before publishing object bullets.** Older clients render objects as `[object Object]` and fail during search. Merging that PR or passing schema validation does not prove deployment. Keep existing content as strings during this compatibility change.
 
-The existing shared checker/CI gate now rejects objects anywhere in either plan file unless explicitly enabled. After the release owner verifies compatible desktop clients are deployed for the audience consuming these shared files, record deployment evidence in the content PR and:
-
-- Run `python3 scripts/check_release_notes.py --base origin/main --allow-edited-notes` locally, along with the existing exact jq checks.
-- Set the repository Actions variable `RELEASE_NOTES_EDITED_NOTES_READY` to the exact value `true` to enable the same option in CI. Unset or other values block objects. This variable is a human assertion of verified rollout, not a deployment detector; it is not set by this compatibility change.
-
-The option permits objects through the publishing-readiness check only; all structural and proposed-entry rules still apply. Tests validate the dual-format contract independently of this rollout gate. CI remains a PR/push validation check, not a pre-serving deployment barrier: `main` is served immediately, and branch protection is outside this repository's workflow. Continue using a reviewed PR; never rely on a failing post-push job to prevent publication. Do not merge, publish content, or deploy without the separately required request.
+Local and CI validation accept both formats automatically, with no rollout variable or command-line opt-in. Validation checks the content format; publishing object bullets remains a separate content decision after the compatible UI is deployed. Keep using strings until then. Continue using a reviewed PR because `main` is served immediately.
 
 ## Preserve text through JSON and HTML
 

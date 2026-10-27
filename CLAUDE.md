@@ -76,7 +76,7 @@ An object must contain exactly `text` (a nonblank string, with the same HTML sup
 
 **UI first:** [flex5-desktop PR #4905](https://github.com/flex-rental-solutions/flex5-desktop/pull/4905) must be deployed to compatible desktop clients before publishing any object bullets. Older clients show `[object Object]` and their search fails. Schema acceptance and a merged UI PR are not deployment evidence. Keep existing bullets as strings; do not convert them as part of this compatibility work.
 
-The shared local/CI checker blocks object bullets in either complete plan file by default, including unchanged entries. Only after the release owner verifies the compatible-client rollout may they use `--allow-edited-notes` locally and set the GitHub repository Actions variable `RELEASE_NOTES_EDITED_NOTES_READY` to the exact string `true` for CI. An unset or any other value keeps CI blocked. The variable is an explicit human rollout assertion, not an automatic deployment check; this change does not set it or assert deployment readiness. The opt-in never bypasses schema, date, duplicate-key, or existing content checks. See the [repository workflow](docs/release-notes-workflow.md) for publishing limits.
+Local and CI validation accept both formats automatically. No rollout variable or command-line opt-in is required. Passing validation checks the content format; it does not establish desktop deployment readiness. See the [repository workflow](docs/release-notes-workflow.md) for the UI-first publishing prerequisite.
 
 ### Deep-linking into the Flex app
 
