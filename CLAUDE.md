@@ -1,6 +1,8 @@
 # CLAUDE.md — flex-release-notes
 
-This repo is a content-only JSON repository. There is no build step, no dependencies, and no code to run. **Push to `main` and changes are live immediately** — the Flex app fetches these files directly from GitHub at runtime.
+This repository serves JSON content without an application build or deploy step. Local and CI validation use Python 3, jq, and the schema dependency pinned in `requirements-validation.txt`. **Push to `main` and changes are live immediately** — the Flex app fetches these files directly from GitHub at runtime.
+
+For release-note changes, read [AGENTS.md](AGENTS.md) and [docs/release-notes-workflow.md](docs/release-notes-workflow.md). Those repository-owned instructions govern the current workflow and pre-push validation, including preserving user-supplied copy verbatim.
 
 ## Files
 
@@ -149,10 +151,10 @@ Add new videos before the closing `]`. The app displays videos in file order.
 
 ## Rules and conventions
 
-- **JSON must be valid.** Invalid JSON silently breaks the popup. Always validate after editing (e.g., paste into jsonlint.com or use a JSON-aware editor).
+- **JSON must be valid.** Invalid JSON silently breaks the popup. Run `python3 scripts/check_release_notes.py --base origin/main` locally before any remote push; this shares the schema and jq checks with CI.
 - **Newest entries at the top** for both release notes files.
 - **No trailing commas.** Standard JSON does not allow them.
 - **Both plan files** (`flex-enterprise.json` and `flex-assets.json`) should generally stay in sync for release entries. Assets-specific notes can be omitted from enterprise and vice versa.
 - **Patch note tone:** Start with "Fix for an issue that caused..." or "Various fixes and improvements." Keep it user-facing, not technical.
-- **Bullet length:** Keep each note to one clear sentence. No markdown — plain text only inside `notes` arrays.
+- **Bullet length:** Keep each note to one clear sentence. No Markdown syntax. Intentional HTML links are supported in `notes`; preserve supplied markup and escape literal text appropriately.
 - **HTML in `announcement`:** Keep it concise. Avoid complex styling. Escape double quotes as `\"` inside JSON strings.

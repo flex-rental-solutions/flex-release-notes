@@ -141,3 +141,18 @@ Pinned entries render as a blue info banner at the very top of the popup, above 
 - **HTML in `announcement`** — keep it short. Supports basic tags (`<a>`, `<br>`, `<strong>`, `<span style="...">`).
 - **Linking into the app** — use `<a class="flex-app-redirect" href="#your-route">link text</a>` to deep-link to a page inside Flex. The popup will close and navigate automatically.
 - **No deploy needed** — both files are fetched directly from GitHub at runtime. Push to `main` and it's live.
+
+---
+
+## Agent-assisted release notes and validation
+
+Agents follow [AGENTS.md](AGENTS.md) and the [release-notes workflow](docs/release-notes-workflow.md). The shared agent-config skill routes here; this repository owns the detailed content rules and validation.
+
+From the repository root, install the validation dependency and run the same schema and jq checks as CI before any remote push:
+
+```bash
+python3 -m pip install -r requirements-validation.txt
+python3 scripts/check_release_notes.py --base origin/main
+```
+
+The checker validates both complete plan files against [release-notes.schema.json](release-notes.schema.json), previews changed entries in full, and runs `jq -e '. | length > 0'` on both plan files. Python 3 and jq are required. Historical non-semver labels and highlights without titles remain valid; new or changed entries must follow the current authoring rules. Existing duplicate JSON keys in unchanged historical entries are warnings; new or edited duplicate keys fail validation. This preserves existing content while preventing new ambiguity. Run checker behavior tests with `python3 -m unittest discover -s tests -v`.
