@@ -72,6 +72,25 @@ class ReleaseCheckerTest(unittest.TestCase):
             result = self.run_check(json.dumps([legacy]))
             self.assertEqual(result.returncode, expected, result.stderr)
 
+    def test_new_major_zero_patch_versions_fail(self):
+        for version in ('0.28.1', '0.0.1', '00.28.001'):
+            with self.subTest(version=version):
+                result=self.run_check(json.dumps([dict(self.new,version=version),self.old]))
+                self.assertNotEqual(result.returncode,0,result.stdout)
+                self.assertIn('version',result.stderr)
+
+    def test_current_version_conventions_preserve_historical_major_zero_entries(self):
+        legacy=dict(self.old,version='0.27.39')
+        for name in ('flex-enterprise.json','flex-assets.json'):
+            (self.root/name).write_text(json.dumps([legacy]))
+        subprocess.run(['git','add','.'],cwd=self.root,check=True)
+        subprocess.run(['git','-c','user.name=Test','-c','user.email=test@example.invalid',
+                        'commit','-qm','legacy major-zero release'],cwd=self.root,check=True)
+        for version in ('0.28.0', '1.23.0', '1.23.1', '12.1.10'):
+            with self.subTest(version=version):
+                result=self.run_check(json.dumps([dict(self.new,version=version),legacy]))
+                self.assertEqual(result.returncode,0,result.stderr)
+
     def test_highlight(self):
         self.new.update(version='highlight-training-2026',highlight=True,title='Training')
         self.assertEqual(self.run_check().returncode,0)

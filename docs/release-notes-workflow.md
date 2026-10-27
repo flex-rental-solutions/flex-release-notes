@@ -32,6 +32,8 @@ These are independent choices: a release can contain ordinary notes, an announce
 | Custom heading | Optional `title` replaces the default “Release x.y” heading entirely. It does not change classification. |
 | Banner at top of popup | `pinned` with `{ "flag": "actual-flag-key", "message": "HTML copy" }`, or an array of those objects for multiple pins. Both shapes are supported; preserve an existing shape when practical. Each pin requires an actual boolean feature flag key; never invent it or change flag targeting. |
 
+Do not author new major-zero versions with a nonzero patch segment, such as `0.28.1`. The proposed-entry schema rejects them; unchanged historical `0.x.y` entries remain valid.
+
 Keep `version`, `date`, and `notes` on new entries, including banner-only entries (`notes: []`). Pins are collected from all eligible entries, so copying an old pin to each new release can duplicate the banner. Preserve historical pins unless removal or movement was requested. Pins on a future version may be hidden by the client's version filter even when their flag is enabled; do not promise immediate visibility just because the date has arrived. For recent patches, the client may show only a changelog link instead of individual bullets.
 
 The docs show pins as arrays, while existing content also uses objects; both are supported by `ReleaseNotesPopup.js` in `flex5-desktop/packages/local/flex-core/src/workbench/`. That renderer also inserts notes and titles as HTML, despite the older plain-text guidance. If behavior is disputed, inspect the available client implementation and state any uncertainty about deployed-client support instead of changing the content schema speculatively.
