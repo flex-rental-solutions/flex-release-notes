@@ -48,9 +48,9 @@ Treat these as separate encoding layers:
 
 ## Validate and show the complete proposal
 
-From the repository root, run `python3 scripts/check_release_notes.py --base origin/main`. Install the local validation dependency with `python3 -m pip install -r requirements-validation.txt` if needed. The checker validates both complete plan files against `release-notes.schema.json`, then checks changed entries and prints their complete content. CI runs this same checker and schema. Run its behavior tests with `python3 -m unittest discover -s tests -v`.
+From the repository root, run `python3 scripts/check_release_notes.py --base origin/main`. Install its dependency with `python3 -m pip install -r requirements-validation.txt` if needed. CI uses the same checker and `release-notes.schema.json`. The checker validates both plan files, checks changed entries and duplicate keys against the base, and emits complete JSON and decoded text. Unchanged historical duplicate keys are warnings; do not rewrite them incidentally. Review copy, audience, dates, flags, links, HTML intent, and the actual diff separately. Run behavior tests with `python3 -m unittest discover -s tests -v`.
 
-It parses both plan files, checks new/changed entries, compares duplicate JSON keys against the base, and emits the full changed entries as serialized JSON followed by their decoded text. Existing duplicate keys elsewhere are reported as baseline warnings; do not silently rewrite historical data to fix them. The checker cannot determine whether the user's copy, audience, dates, flag keys, links, or HTML intent are correct: compare them directly against the request and inspect the actual diff. Before **any push to a remote**, run the current repository CI validation locally against the exact files being pushed. Read `.github/workflows/validate-json.yml` for changes to these checks. Currently both commands must succeed:
+Before **any push to a remote**, run the current repository CI validation locally against the exact files being pushed. Read `.github/workflows/validate-json.yml` for changes to these checks. Currently both commands must succeed:
 
 ```bash
 jq -e '. | length > 0' flex-enterprise.json > /dev/null

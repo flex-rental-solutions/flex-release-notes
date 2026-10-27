@@ -1,6 +1,6 @@
 # CLAUDE.md — flex-release-notes
 
-This repo is a content-only JSON repository. There is no build step, no dependencies, and no code to run. **Push to `main` and changes are live immediately** — the Flex app fetches these files directly from GitHub at runtime.
+This repository serves JSON content without an application build or deploy step. Local and CI validation use Python 3, jq, and the schema dependency pinned in `requirements-validation.txt`. **Push to `main` and changes are live immediately** — the Flex app fetches these files directly from GitHub at runtime.
 
 For release-note changes, read [AGENTS.md](AGENTS.md) and [docs/release-notes-workflow.md](docs/release-notes-workflow.md). Those repository-owned instructions govern the current workflow and pre-push validation, including preserving user-supplied copy verbatim.
 
