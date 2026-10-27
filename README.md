@@ -37,8 +37,25 @@ Each entry in the array is one item in the timeline. Entries are displayed in th
 |-------|----------|-------------|
 | `version` | ✅ | Semver string. Determines whether the entry is a **Release** (x.y.0) or an **Update** (x.y.z where z > 0). |
 | `date` | ✅ | ISO date string `YYYY-MM-DD`. Displayed on the card. |
-| `notes` | ✅ | Array of strings. Each string is one bullet point on the card. |
+| `notes` | ✅ | Array of strings or `{text, editedDate}` objects, one per bullet. Objects require the UI-first rollout below. |
 | `announcement` | ❌ | Optional HTML string rendered in bold above the bullet points. Good for a short headline or intro sentence. Supports `<a>` tags — use `class="flex-app-redirect"` with a hash URL to link to a page inside Flex. |
+
+### Edited bullets and UI-first rollout
+
+The schema accepts legacy strings, edited-note objects, or a mixture in `notes`:
+
+```json
+"notes": [
+  "Existing bullet.",
+  { "text": "Bullet added after publishing.", "editedDate": "2026-10-22" }
+]
+```
+
+An object must contain exactly `text` (a nonblank string, with the same HTML support as string bullets) and `editedDate` (a real calendar date in `YYYY-MM-DD` format, including zero padding; timestamps are rejected). The date is when that bullet was edited, not the release date. Compatible clients show a muted `(edited)` marker with a date tooltip and search the object's `text`. Legacy strings, including existing empty strings, retain their validation behavior.
+
+**UI first:** [flex5-desktop PR #4905](https://github.com/flex-rental-solutions/flex5-desktop/pull/4905) must be deployed to compatible desktop clients before publishing any object bullets. Older clients show `[object Object]` and their search fails. Schema acceptance and a merged UI PR are not deployment evidence. Keep existing bullets as strings; do not convert them as part of this compatibility work.
+
+Local and CI validation accept both formats automatically. No rollout variable or command-line opt-in is required. Passing validation checks the content format; it does not establish desktop deployment readiness. See the [repository workflow](docs/release-notes-workflow.md) for the UI-first publishing prerequisite.
 
 ### Tabs in the popup
 

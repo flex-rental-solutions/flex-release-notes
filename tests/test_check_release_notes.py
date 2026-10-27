@@ -7,6 +7,8 @@ import subprocess
 import tempfile
 import unittest
 
+from scripts.check_release_notes import VALIDATOR, schema_errors, validate_entry
+
 SCRIPT = Path(__file__).resolve().parents[1] / 'scripts' / 'check_release_notes.py'
 
 class ReleaseCheckerTest(unittest.TestCase):
@@ -26,7 +28,70 @@ class ReleaseCheckerTest(unittest.TestCase):
 
     def run_check(self, raw=None):
         (self.root/'flex-enterprise.json').write_text(raw if raw is not None else json.dumps([self.new,self.old]))
-        return subprocess.run([sys.executable,str(SCRIPT),'--base','HEAD'],cwd=self.root,capture_output=True,text=True)
+        args = [sys.executable, str(SCRIPT), '--base', 'HEAD']
+        return subprocess.run(args,cwd=self.root,capture_output=True,text=True)
+
+    def test_supported_bullet_formats(self):
+        edited = {'text': self.new['notes'][0], 'editedDate': '2026-10-22'}
+        for notes in (self.new['notes'], [edited], [self.new['notes'][1], edited], [], ['']):
+            with self.subTest(notes=notes):
+                entry = dict(self.new, notes=notes)
+                self.assertEqual(schema_errors(VALIDATOR, [entry]), [])
+                self.assertEqual(validate_entry(entry), [])
+                result = self.run_check(json.dumps([entry, self.old]))
+                self.assertEqual(result.returncode, 0, result.stderr)
+                for note in notes:
+                    text = note['text'] if isinstance(note, dict) else note
+                    self.assertIn(text, result.stdout)
+                if edited in notes:
+                    self.assertIn('editedDate: 2026-10-22', result.stdout)
+                self.assertEqual(json.loads((self.root/'flex-enterprise.json').read_text()),
+                                 [entry, self.old])
+
+    def test_invalid_bullet_objects(self):
+        edited = {'text': 'Edited bullet.', 'editedDate': '2026-10-22'}
+        invalid = [{}, {'text': 'Missing date.'}, {'editedDate': '2026-10-22'},
+                   dict(edited, extra='unexpected'), None, 1, True, ['nested']]
+        invalid += [dict(edited, text=value) for value in ('', ' \n\t', None, 1, True, [], {})]
+        invalid += [dict(edited, editedDate=value) for value in (
+            '', None, 20261022, True, [], {}, '2026-2-03', '26-10-22', '10/22/2026',
+            '2026-10-22T00:00:00Z', '2026-10-22 ', '2026-10-22\n',
+            '2026-02-30', '2026-13-01', '2026-00-01', '2026-10-00', '2025-02-29')]
+        for note in invalid:
+            with self.subTest(note=note):
+                entry = dict(self.new, notes=['Legacy bullet.', note])
+                self.assertTrue(schema_errors(VALIDATOR, [entry]))
+                self.assertTrue(validate_entry(entry))
+        leap_day = dict(self.new, notes=[dict(edited, editedDate='2024-02-29')])
+        self.assertEqual(validate_entry(leap_day), [])
+        result = self.run_check(json.dumps([dict(self.new, notes=[dict(edited, editedDate='2026-02-30')])]))
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('notes[0]', result.stderr)
+
+    def test_object_bullets_in_both_plans_and_unchanged_entries(self):
+        entry = dict(self.old, notes=[{'text': 'Edited bullet.', 'editedDate': '2026-10-22'}])
+        for filename in ('flex-enterprise.json', 'flex-assets.json'):
+            with self.subTest(filename=filename):
+                for name in ('flex-enterprise.json', 'flex-assets.json'):
+                    (self.root/name).write_text(json.dumps([entry if name == filename else self.old]))
+                subprocess.run(['git', 'add', '.'], cwd=self.root, check=True)
+                subprocess.run(['git', '-c', 'user.name=Test', '-c', 'user.email=test@example.invalid',
+                                'commit', '-qm', 'object baseline'], cwd=self.root, check=True)
+                raw = (self.root/'flex-enterprise.json').read_text()
+                result = self.run_check(raw)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertIn('No content changes.', result.stdout)
+
+    def test_new_object_bullets_and_duplicate_keys(self):
+        raw = '[{"version":"1.23.0","date":"2026-11-10","notes":[{"text":"Edited bullet.","editedDate":"2026-10-22"}]}]'
+        result = self.run_check(raw)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        for key, value in (('text', 'Shadowed text.'), ('editedDate', '2026-10-21')):
+            with self.subTest(key=key):
+                duplicate = raw.replace(f'"{key}":', f'"{key}":"{value}","{key}":')
+                result = self.run_check(duplicate)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn(f'duplicate key $.notes[0].{key}', result.stderr)
 
     def test_exact_decoded_text_and_no_mutation(self):
         result=self.run_check()

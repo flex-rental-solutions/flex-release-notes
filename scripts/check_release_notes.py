@@ -77,7 +77,11 @@ def preview(label, entry):
     notes = entry.get('notes', [])
     if isinstance(notes, list):
         for index, note in enumerate(notes, 1):
-            print(f'note {index}:\n{note}')
+            if isinstance(note, dict):
+                print(f'note {index}:\n{note.get("text")}')
+                print(f'editedDate: {note.get("editedDate")}')
+            else:
+                print(f'note {index}:\n{note}')
     pins = entry.get('pinned', [])
     for pin in pins if isinstance(pins, list) else [pins]:
         if isinstance(pin, dict):

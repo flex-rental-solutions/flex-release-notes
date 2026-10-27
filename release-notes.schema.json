@@ -7,6 +7,22 @@
     "$ref": "#/$defs/entry"
   },
   "$defs": {
+    "editedNote": {
+      "type": "object",
+      "required": ["text", "editedDate"],
+      "properties": {
+        "text": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "editedDate": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "format": "date"
+        }
+      },
+      "additionalProperties": false
+    },
     "pin": {
       "type": "object",
       "required": [
@@ -45,7 +61,10 @@
         "notes": {
           "type": "array",
           "items": {
-            "type": "string"
+            "oneOf": [
+              {"type": "string"},
+              {"$ref": "#/$defs/editedNote"}
+            ]
           }
         },
         "announcement": {
