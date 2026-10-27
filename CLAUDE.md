@@ -55,11 +55,28 @@ The app reads `version` to decide how to render the entry:
 |-------|----------|-------|
 | `version` | ✅ | Semver string. Determines release vs. update classification (see above). For highlight entries, use a descriptive slug like `"highlight-infocomm-2026"` — it won't be displayed. |
 | `date` | ✅ | `YYYY-MM-DD`. Shown on the card. |
-| `notes` | ✅ | Array of strings. Each string = one bullet. Can be empty array `[]`. |
+| `notes` | ✅ | Array of strings or `{text, editedDate}` objects, one per bullet; `[]` is allowed. Objects require the UI-first rollout below. |
 | `announcement` | ❌ | HTML string. Rendered above bullets in a slightly bolder style. Good for a short intro sentence or headline. Supports `<a>`, `<br>`, `<strong>`, `<span style="...">`. |
 | `title` | ❌ | Overrides the auto-generated "Release x.y" heading entirely. Use for highlights or when a release needs a custom label (e.g., "Important Announcement"). |
 | `highlight` | ❌ | `true` to mark as a standalone highlight/announcement not tied to a release. Renders as a release card. |
 | `pinned` | ❌ | Array of feature-flag-gated banner messages shown at the very top of the popup. Each item needs `flag` (LaunchDarkly/feature flag key, boolean) and `message` (HTML string). |
+
+### Edited bullets and UI-first rollout
+
+The schema accepts legacy strings, edited-note objects, or a mixture in `notes`:
+
+```json
+"notes": [
+  "Existing bullet.",
+  { "text": "Bullet added after publishing.", "editedDate": "2026-10-22" }
+]
+```
+
+An object must contain exactly `text` (a nonblank string, with the same HTML support as string bullets) and `editedDate` (a real calendar date in `YYYY-MM-DD` format, including zero padding; timestamps are rejected). The date is when that bullet was edited, not the release date. Compatible clients show a muted `(edited)` marker with a date tooltip and search the object's `text`. Legacy strings, including existing empty strings, retain their validation behavior.
+
+**UI first:** [flex5-desktop PR #4905](https://github.com/flex-rental-solutions/flex5-desktop/pull/4905) must be deployed to compatible desktop clients before publishing any object bullets. Older clients show `[object Object]` and their search fails. Schema acceptance and a merged UI PR are not deployment evidence. Keep existing bullets as strings; do not convert them as part of this compatibility work.
+
+The shared local/CI checker blocks object bullets in either complete plan file by default, including unchanged entries. Only after the release owner verifies the compatible-client rollout may they use `--allow-edited-notes` locally and set the GitHub repository Actions variable `RELEASE_NOTES_EDITED_NOTES_READY` to the exact string `true` for CI. An unset or any other value keeps CI blocked. The variable is an explicit human rollout assertion, not an automatic deployment check; this change does not set it or assert deployment readiness. The opt-in never bypasses schema, date, duplicate-key, or existing content checks. See the [repository workflow](docs/release-notes-workflow.md) for publishing limits.
 
 ### Deep-linking into the Flex app
 

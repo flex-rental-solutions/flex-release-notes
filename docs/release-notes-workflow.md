@@ -25,7 +25,7 @@ These are independent choices: a release can contain ordinary notes, an announce
 
 | Intent | Representation and behavior |
 | --- | --- |
-| Release | `version: "x.y.0"`, `date: "YYYY-MM-DD"`, `notes: [strings]`. Full card in Highlights, Releases, and All. |
+| Release | `version: "x.y.0"`, `date: "YYYY-MM-DD"`, `notes: [strings or edited-note objects]` (objects require the UI-first rollout below). Full card in Highlights, Releases, and All. |
 | Patch/update | `x.y.z` with major >= 1 and patch > 0; same required fields. Update in All, grouped by minor version. Do not renumber a patch to make it a release. Legacy `0.x.y` entries use different classification. |
 | Intro/headline on a release card | Optional `announcement` HTML string above bullets. This does not make an entry a highlight or a pin. The patch renderer does not show this field; clarify if a patch request requires a visible headline. |
 | Standalone event, notice, spotlight | `highlight: true`, unique non-semver `version` slug such as `highlight-training-2026`, `title`, `date`, and `notes`. Highlights and All, excluded from Releases. |
@@ -37,6 +37,19 @@ Do not author new major-zero versions with a nonzero patch segment, such as `0.2
 Keep `version`, `date`, and `notes` on new entries, including banner-only entries (`notes: []`). Pins are collected from all eligible entries, so copying an old pin to each new release can duplicate the banner. Preserve historical pins unless removal or movement was requested. Pins on a future version may be hidden by the client's version filter even when their flag is enabled; do not promise immediate visibility just because the date has arrived. For recent patches, the client may show only a changelog link instead of individual bullets.
 
 The docs show pins as arrays, while existing content also uses objects; both are supported by `ReleaseNotesPopup.js` in `flex5-desktop/packages/local/flex-core/src/workbench/`. That renderer also inserts notes and titles as HTML, despite the older plain-text guidance. If behavior is disputed, inspect the available client implementation and state any uncertainty about deployed-client support instead of changing the content schema speculatively.
+
+## Edited-note compatibility and publishing readiness
+
+`notes[]` accepts strings and objects in any combination. An edited object has exactly two required fields: `text`, a nonblank string using the same HTML conventions as string bullets, and `editedDate`, a real calendar date formatted `YYYY-MM-DD` (e.g. `2026-10-22`). Reject missing or extra keys, non-string fields, blank text, impossible dates, non-padded dates, and timestamps. Existing string validation is unchanged. The checker previews decoded `text` and `editedDate` separately and preserves both in its exact JSON output.
+
+This contract comes from [flex5-desktop PR #4905](https://github.com/flex-rental-solutions/flex5-desktop/pull/4905). **Deploy the compatible UI before publishing object bullets.** Older clients render objects as `[object Object]` and fail during search. Merging that PR or passing schema validation does not prove deployment. Keep existing content as strings during this compatibility change.
+
+The existing shared checker/CI gate now rejects objects anywhere in either plan file unless explicitly enabled. After the release owner verifies compatible desktop clients are deployed for the audience consuming these shared files, record deployment evidence in the content PR and:
+
+- Run `python3 scripts/check_release_notes.py --base origin/main --allow-edited-notes` locally, along with the existing exact jq checks.
+- Set the repository Actions variable `RELEASE_NOTES_EDITED_NOTES_READY` to the exact value `true` to enable the same option in CI. Unset or other values block objects. This variable is a human assertion of verified rollout, not a deployment detector; it is not set by this compatibility change.
+
+The option permits objects through the publishing-readiness check only; all structural and proposed-entry rules still apply. Tests validate the dual-format contract independently of this rollout gate. CI remains a PR/push validation check, not a pre-serving deployment barrier: `main` is served immediately, and branch protection is outside this repository's workflow. Continue using a reviewed PR; never rely on a failing post-push job to prevent publication. Do not merge, publish content, or deploy without the separately required request.
 
 ## Preserve text through JSON and HTML
 
