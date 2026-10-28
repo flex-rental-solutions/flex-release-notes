@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.22.1",
+    "date": "2026-10-29",
+    "notes": [
+      "Internal tooling update."
+    ]
+  },
+  {
     "version": "1.22.0",
     "date": "2026-10-29",
     "notes": [
