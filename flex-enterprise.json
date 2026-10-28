@@ -2,7 +2,27 @@
   {
     "version": "1.22.0",
     "date": "2026-10-29",
-    "notes": [],
+    "notes": [
+      "Added an Audit Trail to elements to track changes, and consolidated Status Changes and Event History with it down to one “History” tab.",
+      "Added custom date fields to Bulk Edit Element Dates.",
+      "Added the ability to copy selected lines from a model’s Contents, Suggestions, Storage Requirements, Alternatives or Substitutions tab and paste them into any of those tabs on the same model or another model.",
+      "Added the ability to configure header block columns for equipment lists from the Views tab in the Equipment List element definition settings.",
+      "Added RFID and dimensions tokens to printer templates.",
+      "Added a \"deleted\" indicator to content builder for deleted containers.",
+      "Added click-to-sort and filtering for barcode printers",
+      "Added the ability to send inquiries and/or offers within Assignment Dashboard. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> Only)",
+      "Added the ability to bulk assign labor roles to a single contact. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> Only)",
+      "Added line notes and call start/end field types for Staffing and Contact email templates. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> Only)",
+      "Adjusted the model's \"inventory\" tabs to all ignore duplicate models the same way.",
+      "Adjusted Status options across Flex to the new pill styling.",
+      "Adjusted New Contact popup to have “Is Company” dropdown as first field to prevent issues with changing this field mid-entry.",
+      "Adjusted Create New and Edit Header popups to have Business Location dropdown as first field to prevent issues with resetting information if this field is changed.",
+      "Fixed an issue where drag and drop automatic scrolling passed the top or bottom of the view wasn’t working.",
+      "Fixed an issue where shift+select wasn't checking collapsed child lines.",
+      "Fixed an issue causing slow load times in Inventory Manager.",
+      "Fixed an issue where virtual items could be scanned on Receiving screen.",
+      "Fixed an issue that prevented finalizing scanning screens when lots of child lines were present."
+    ],
     "announcement": "<div class=\"rn-dark-mode-note\"><span class=\"rn-dark-mode-text\">Added support for dark mode.</span><span class=\"rn-dark-mode-spotlight\" aria-hidden=\"true\">Added support for dark mode.</span></div>"
   },
   {
