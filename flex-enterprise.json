@@ -2,9 +2,7 @@
   {
     "version": "1.22.0",
     "date": "2026-10-29",
-    "notes": [
-      "Internal test note. Remove when complete"
-    ],
+    "notes": [],
     "announcement": "<div class=\"rn-dark-mode-note\"><span class=\"rn-dark-mode-text\">Added support for dark mode.</span><span class=\"rn-dark-mode-spotlight\" aria-hidden=\"true\">Added support for dark mode.</span></div>"
   },
   {
