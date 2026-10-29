@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.23.0",
+    "date": "2026-11-12",
+    "notes": [
+      "This release note is just for testing.",
+      { "text": "This is an edited release note.", "editedDate": "2026-10-22" }
+    ]
+  },
+  {
     "version": "1.22.1",
     "date": "2026-10-29",
     "notes": [
