@@ -21,7 +21,7 @@
       "Added an Audit Trail to elements to track changes, and consolidated Status Changes and Event History with it down to one “History” tab.",
       "Added custom date fields to Bulk Edit Element Dates.",
       "Added the ability to copy selected lines from a model’s Contents, Suggestions, Storage Requirements, Alternatives or Substitutions tab and paste them into any of those tabs on the same model or another model.",
-      "Added the ability to configure header block columns for equipment lists from the Views tab in the Equipment List element definition settings.",
+      "Added the ability to configure detail block columns for equipment lists from the Views tab in the Equipment List element definition settings.",
       "Added RFID and dimensions tokens to printer templates.",
       "Added a \"deleted\" indicator to content builder for deleted containers.",
       "Added click-to-sort and filtering for barcode printers",
