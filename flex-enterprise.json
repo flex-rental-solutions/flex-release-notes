@@ -8,6 +8,30 @@
     ]
   },
   {
+    "version": "1.22.4",
+    "date": "2026-10-30",
+    "notes": [
+      "Added a \"Warn when workspace limit is reached\" option in Workspaces. Warnings are off by default.",
+      "Added the saved-workspace count beside the Workspaces icon."
+    ]
+  },
+  {
+    "version": "1.22.3",
+    "date": "2026-10-29",
+    "notes": [
+      "Fixed workspace tooltips not appearing reliably.",
+      "Fixed an issue where loading tabs could unexpectedly change the selected tab or return you to Home.",
+      "Fixed an issue where renaming an unsaved workspace could appear to succeed when the 10-workspace limit had been reached."
+    ]
+  },
+  {
+    "version": "1.22.2",
+    "date": "2026-10-30",
+    "notes": [
+      "Workspace-limit warning preferences are now saved with your user profile."
+    ]
+  },
+  {
     "version": "1.22.1",
     "date": "2026-10-29",
     "notes": [
