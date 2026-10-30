@@ -18,6 +18,10 @@
     "version": "1.22.0",
     "date": "2026-10-29",
     "notes": [
+      {
+        "text": "Added Workspaces.",
+        "editedDate": "2026-10-30"
+      },
       "Added an Audit Trail to elements to track changes, and consolidated Status Changes and Event History with it down to one “History” tab.",
       "Added custom date fields to Bulk Edit Element Dates.",
       "Added the ability to copy selected lines from a model’s Contents, Suggestions, Storage Requirements, Alternatives or Substitutions tab and paste them into any of those tabs on the same model or another model.",

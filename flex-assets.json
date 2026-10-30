@@ -10,6 +10,10 @@
     "version": "1.22.0",
     "date": "2026-10-29",
     "notes": [
+      {
+        "text": "Added Workspaces.",
+        "editedDate": "2026-10-30"
+      },
       "Adjusted New Contact popup to have “Is Company” dropdown as first field to prevent issues with changing this field mid-entry",
       "Added RFID and dimensions tokens to printer templates."
     ],
