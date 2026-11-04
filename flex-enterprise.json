@@ -1,10 +1,35 @@
 [
   {
+    "version": "1.22.7",
+    "date": "2026-11-04",
+    "notes": [
+      "Internal permission adjustment."
+    ]
+  },
+  {
+    "version": "1.22.6",
+    "date": "2026-11-03",
+    "notes": [
+      "Internal tooling update."
+    ]
+  },
+  {
+    "version": "1.22.5",
+    "date": "2026-11-02",
+    "notes": [
+      "Internal tooling update."
+    ]
+  },
+  {
     "version": "1.22.4",
     "date": "2026-10-30",
     "notes": [
       "Added a \"Warn when workspace limit is reached\" option in Workspaces. Warnings are off by default.",
-      "Added the saved-workspace count beside the Workspaces icon."
+      "Added the saved-workspace count beside the Workspaces icon.",
+      {
+        "text": "Internal permission adjustment.",
+        "editedDate": "2026-11-04"
+      }
     ]
   },
   {
