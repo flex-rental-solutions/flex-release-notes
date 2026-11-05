@@ -37,7 +37,7 @@ Each entry in the array is one item in the timeline. Entries are displayed in th
 |-------|----------|-------------|
 | `version` | ✅ | Semver string. Determines whether the entry is a **Release** (x.y.0) or an **Update** (x.y.z where z > 0). |
 | `date` | ✅ | ISO date string `YYYY-MM-DD`. Displayed on the card. |
-| `notes` | ✅ | Array of strings or `{text, editedDate}` objects, one per bullet. Objects require the UI-first rollout below. |
+| `notes` | ✅ | Array of strings or note objects with `text` and `editedDate`, `flag`, or both, one per bullet. Objects require the UI-first rollout below. |
 | `announcement` | ❌ | Optional HTML string rendered in bold above the bullet points. Good for a short headline or intro sentence. Supports `<a>` tags — use `class="flex-app-redirect"` with a hash URL to link to a page inside Flex. |
 
 ### Edited bullets and UI-first rollout
@@ -51,7 +51,23 @@ The schema accepts legacy strings, edited-note objects, or a mixture in `notes`:
 ]
 ```
 
-An object must contain exactly `text` (a nonblank string, with the same HTML support as string bullets) and `editedDate` (a real calendar date in `YYYY-MM-DD` format, including zero padding; timestamps are rejected). The date is when that bullet was edited, not the release date. Compatible clients show a muted `(edited)` marker with a date tooltip and search the object's `text`. Legacy strings, including existing empty strings, retain their validation behavior.
+An object requires `text` (a nonblank string, with the same HTML support as string bullets) and at least one of `editedDate` or `flag`; no other keys are accepted. `editedDate` must be a real calendar date in `YYYY-MM-DD` format, including zero padding; timestamps are rejected. The date is when that bullet was edited, not the release date. Compatible clients show a muted `(edited)` marker with a date tooltip and search the object's `text`. Legacy strings, including existing empty strings, retain their validation behavior.
+
+### Feature-flagged bullets
+
+Use the optional `flag` key to show an individual bullet only when that boolean feature flag evaluates to true in the current Flex system:
+
+```json
+"notes": [
+  "Visible to everyone.",
+  { "text": "Dark Mode is now available.", "flag": "dark-mode" },
+  { "text": "Updated Dark Mode details.", "flag": "dark-mode", "editedDate": "2026-11-04" }
+]
+```
+
+`flag` must be a nonblank string containing an actual feature flag key. False, unknown, or unavailable flags hide the bullet from display and search. Notes without a flag keep their existing behavior. The release version/date and patch counts remain even when all its bullets are hidden. This format works in both Enterprise and Assets, and does not change pinned messages.
+
+**Deploy the TWR-980 desktop filtering change before publishing flagged bullets.** Clients that support edited objects but lack flag filtering will display flagged notes regardless of the flag. Schema validation does not prove desktop deployment readiness. Keep the live feeds unchanged until compatible clients are deployed.
 
 **UI first:** [flex5-desktop PR #4905](https://github.com/flex-rental-solutions/flex5-desktop/pull/4905) must be deployed to compatible desktop clients before publishing any object bullets. Older clients show `[object Object]` and their search fails. Schema acceptance and a merged UI PR are not deployment evidence. Keep existing bullets as strings; do not convert them as part of this compatibility work.
 

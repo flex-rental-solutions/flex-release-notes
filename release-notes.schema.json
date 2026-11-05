@@ -7,11 +7,19 @@
     "$ref": "#/$defs/entry"
   },
   "$defs": {
-    "editedNote": {
+    "note": {
       "type": "object",
-      "required": ["text", "editedDate"],
+      "required": ["text"],
+      "anyOf": [
+        {"required": ["editedDate"]},
+        {"required": ["flag"]}
+      ],
       "properties": {
         "text": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "flag": {
           "type": "string",
           "pattern": "\\S"
         },
@@ -63,7 +71,7 @@
           "items": {
             "oneOf": [
               {"type": "string"},
-              {"$ref": "#/$defs/editedNote"}
+              {"$ref": "#/$defs/note"}
             ]
           }
         },

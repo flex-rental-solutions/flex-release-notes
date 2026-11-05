@@ -79,7 +79,9 @@ def preview(label, entry):
         for index, note in enumerate(notes, 1):
             if isinstance(note, dict):
                 print(f'note {index}:\n{note.get("text")}')
-                print(f'editedDate: {note.get("editedDate")}')
+                for key in ('editedDate', 'flag'):
+                    if key in note:
+                        print(f'{key}: {note[key]}')
             else:
                 print(f'note {index}:\n{note}')
     pins = entry.get('pinned', [])

@@ -68,6 +68,51 @@ class ReleaseCheckerTest(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('notes[0]', result.stderr)
 
+    def test_flagged_notes_in_both_plans(self):
+        notes = ['Legacy bullet.',
+                 {'text': 'Flagged bullet.', 'flag': 'dark-mode'},
+                 {'text': 'Edited flagged bullet.', 'flag': 'dark-mode', 'editedDate': '2026-10-22'}]
+        entry = dict(self.new, notes=notes)
+        self.assertEqual(schema_errors(VALIDATOR, [entry]), [])
+        self.assertEqual(validate_entry(entry), [])
+        for filename in ('flex-enterprise.json', 'flex-assets.json'):
+            with self.subTest(filename=filename):
+                for name in ('flex-enterprise.json', 'flex-assets.json'):
+                    (self.root/name).write_text(json.dumps([entry, self.old] if name == filename else [self.old]))
+                raw = (self.root/'flex-enterprise.json').read_text()
+                result = self.run_check(raw)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertIn('flag: dark-mode', result.stdout)
+                self.assertIn('editedDate: 2026-10-22', result.stdout)
+                self.assertNotIn('editedDate: None', result.stdout)
+                self.assertEqual(json.loads((self.root/filename).read_text()), [entry, self.old])
+                subprocess.run(['git', 'add', '.'], cwd=self.root, check=True)
+                subprocess.run(['git', '-c', 'user.name=Test', '-c', 'user.email=test@example.invalid',
+                                'commit', '-qm', 'flagged baseline'], cwd=self.root, check=True)
+                unchanged = self.run_check(raw)
+                self.assertEqual(unchanged.returncode, 0, unchanged.stderr)
+                self.assertIn('No content changes.', unchanged.stdout)
+
+    def test_invalid_flagged_notes_fail_schema_and_checker(self):
+        flagged = {'text': 'Flagged bullet.', 'flag': 'dark-mode'}
+        invalid = [dict(flagged, flag=value) for value in ('', ' \n\t', None, 1, True, [], {})]
+        invalid += [{'flag': 'dark-mode'}, dict(flagged, extra='unexpected'),
+                    dict(flagged, editedDate='2026-02-30'), dict(flagged, text=' ')]
+        for note in invalid:
+            with self.subTest(note=note):
+                entry = dict(self.new, notes=[note])
+                self.assertTrue(schema_errors(VALIDATOR, [entry]))
+                self.assertTrue(validate_entry(entry))
+                result = self.run_check(json.dumps([entry, self.old]))
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn('notes[0]', result.stderr)
+
+    def test_duplicate_note_flag_fails_checker(self):
+        raw = '[{"version":"1.23.0","date":"2026-11-10","notes":[{"text":"Flagged bullet.","flag":"first","flag":"second"}]}]'
+        result = self.run_check(raw)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('duplicate key $.notes[0].flag', result.stderr)
+
     def test_object_bullets_in_both_plans_and_unchanged_entries(self):
         entry = dict(self.old, notes=[{'text': 'Edited bullet.', 'editedDate': '2026-10-22'}])
         for filename in ('flex-enterprise.json', 'flex-assets.json'):
