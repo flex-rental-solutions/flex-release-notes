@@ -32,7 +32,7 @@ These are independent choices: a release can contain ordinary notes, an announce
 
 | Intent | Representation and behavior |
 | --- | --- |
-| Release | `version: "x.y.0"`, `date: "YYYY-MM-DD"`, `notes: [strings or edited-note objects]` (objects require the UI-first rollout below). Full card in Highlights, Releases, and All. |
+| Release | `version: "x.y.0"`, `date: "YYYY-MM-DD"`, `notes: [strings or note objects]` (objects require the UI-first rollout below). Objects require `text` and `editedDate`, `flag`, or both. Full card in Highlights, Releases, and All. |
 | Patch/update | `x.y.z` with major >= 1 and patch > 0; same required fields. Update in All, grouped by minor version. Do not renumber a patch to make it a release. Legacy `0.x.y` entries use different classification. |
 | Intro/headline on a release card | Optional `announcement` HTML string above bullets. This does not make an entry a highlight or a pin. The patch renderer does not show this field; clarify if a patch request requires a visible headline. |
 | Standalone event, notice, spotlight | `highlight: true`, unique non-semver `version` slug such as `highlight-training-2026`, `title`, `date`, and `notes`. Highlights and All, excluded from Releases. |
@@ -47,7 +47,11 @@ The docs show pins as arrays, while existing content also uses objects; both are
 
 ## Edited-note compatibility and publishing readiness
 
-`notes[]` accepts strings and objects in any combination. An edited object has exactly two required fields: `text`, a nonblank string using the same HTML conventions as string bullets, and `editedDate`, a real calendar date formatted `YYYY-MM-DD` (e.g. `2026-10-22`). Reject missing or extra keys, non-string fields, blank text, impossible dates, non-padded dates, and timestamps. Existing string validation is unchanged. The checker previews decoded `text` and `editedDate` separately and preserves both in its exact JSON output.
+`notes[]` accepts strings and objects in any combination. A note object requires `text`, a nonblank string using the same HTML conventions as string bullets, and at least one of `editedDate` or `flag`. `editedDate` is a real calendar date formatted `YYYY-MM-DD` (e.g. `2026-10-22`). `flag` is a nonblank string containing an actual boolean feature flag key. No other object keys are accepted. Reject missing required keys, extra keys, non-string fields, blank text or flags, impossible dates, non-padded dates, and timestamps. Existing string validation is unchanged. The checker previews decoded `text` and any supplied `editedDate` and `flag` separately and preserves them in its exact JSON output.
+
+For example, `{ "text": "Dark Mode is now available.", "flag": "dark-mode" }` shows only when that flag evaluates to true in the current Flex system. False, unknown, or unavailable flags hide the bullet from display and search. Unflagged notes retain existing behavior. An edited flagged note may contain both `flag` and `editedDate`; the flag does not require an edited date. Release version/date records and patch counts remain even when all bullets are hidden. Pinned-message behavior is unchanged.
+
+**Deploy the TWR-980 desktop filtering change before publishing flagged bullets in either plan.** Clients with edited-object support but without flag filtering still display these notes regardless of the flag. Passing validation or merging the UI change is not evidence of deployment. Do not add flagged content as part of the schema and validator change.
 
 This contract comes from [flex5-desktop PR #4905](https://github.com/flex-rental-solutions/flex5-desktop/pull/4905). **Deploy the compatible UI before publishing object bullets.** Older clients render objects as `[object Object]` and fail during search. Merging that PR or passing schema validation does not prove deployment. Keep existing content as strings during this compatibility change.
 
