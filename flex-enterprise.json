@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.23.0",
+    "date": "2026-11-09",
+    "notes": [
+      {
+        "text": "<strong>Flex5 Availability is here</strong><br>Your account now runs on Flex5 Availability, our next-generation availability engine. See what's available in real time, catch shortages and conflicts sooner, and book with confidence knowing your numbers are accurate across every quote, job, and warehouse. There's nothing to set up, because it's already working behind the scenes.",
+        "flag": "AvailabilityMasterSwitch"
+      },
+      "Various fixes."
+    ]
+  },
+  {
     "version": "1.22.7",
     "date": "2026-11-04",
     "notes": [
