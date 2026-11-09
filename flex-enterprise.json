@@ -11,6 +11,13 @@
     ]
   },
   {
+    "version": "1.22.8",
+    "date": "2026-11-05",
+    "notes": [
+      "Improved the relevance of updates shown in What’s New."
+    ]
+  },
+  {
     "version": "1.22.7",
     "date": "2026-11-04",
     "notes": [
