@@ -71,7 +71,8 @@
     "date": "2026-10-29",
     "notes": [
       "Internal tooling update.",
-      "Fixed an issue where QuickBooks Online exports could fail with a VendorRef error even when no vendor details had changed."
+      "Fixed an issue where QuickBooks Online exports could fail with a VendorRef error even when no vendor details had changed.",
+      "Implemented the Shortage and Shortage By Group reports in the new report engine."
     ]
   },
   {
