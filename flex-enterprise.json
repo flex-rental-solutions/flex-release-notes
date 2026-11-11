@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.23.1",
+    "date": "2026-11-11",
+    "notes": [
+      "Fixed workspace history being replaced by Home-only layouts and corrected the Workspaces badge to count only Permanent workspaces. Also fixed workspace selection and saving Home-only workspaces as Permanent, and improved renaming, changing Permanent status, and deleting workspaces open in other tabs in the same browser."
+    ]
+  },
+  {
     "version": "1.23.0",
     "date": "2026-11-09",
     "notes": [
