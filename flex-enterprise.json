@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.23.2",
+    "date": "2026-11-14",
+    "notes": [
+      "Fixed an issue that cause an error when including special characters in Contact search fields.",
+      "Fixed an issue where expendable items on Equipment Lists used the Rental resource type instead of the expendable resource type."
+    ]
+  },
+  {
     "version": "1.23.1",
     "date": "2026-11-11",
     "notes": [
