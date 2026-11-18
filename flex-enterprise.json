@@ -36,7 +36,7 @@
       "Adjusted Workflows to require a Workflow State to have an \"Initial State\" selected.",
       "Adjusted User Access History with performance improvements.",
       "Adjusted contacts’ “No” responses to add an Unavailable - Declined event to their schedule. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> Only)",
-      "Updated document links in emails to open directly in Flex5.",
+      "Adjusted document links in emails to open directly in Flex5.",
       "Fixed an issue where uploading large files to Remote File List elements failed on slower connections.",
       "Fixed an issue where updating a Pullsheet through workflow undid substituted lines.",
       "Fixed an issue where Notes and other new field types didn’t display correctly in Staffing email templates, and added Long/Full Date with Time call fields. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> Only)",
