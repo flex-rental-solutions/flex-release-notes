@@ -19,7 +19,7 @@
       "Adjusted the new Flex Blue and Dark Mode UIs to make it cleaner and more consistent.",
       "Adjusted icons across Flex to be more modern and sharper.",
       "Adjusted document links in emails to open directly in Flex5.",
-      "Improved error handling for deleted or missing workflow actions."
+      "Added improved error handling for deleted or missing workflow actions."
     ]
   },
   {

@@ -40,7 +40,7 @@
       "Fixed an issue where uploading large files to Remote File List elements failed on slower connections.",
       "Fixed an issue where updating a Pullsheet through workflow undid substituted lines.",
       "Fixed an issue where Notes and other new field types didn’t display correctly in Staffing email templates, and added Long/Full Date with Time call fields. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> Only)",
-      "Improved error handling for deleted or missing workflow actions."
+      "Added improved error handling for deleted or missing workflow actions."
     ]
   },
   {
