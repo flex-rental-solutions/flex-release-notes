@@ -1,4 +1,28 @@
-[{
+[
+  {
+    "version": "1.24.0",
+    "date": "2026-11-19",
+    "notes": [
+      "Added the ability to edit header fields directly on Serial Unit, Inventory Model, Contact, and Location detail pages.",
+      {
+        "text": "Added bulk RFID scanning support for batches of up to 250 tags, with recoverable progress and individual scan results.",
+        "flag": "Warehouse-Batch-Scanning"
+      },
+      {
+        "text": "Added configurable filename templates for report downloads and email attachments.",
+        "flag": "TWR-824"
+      },
+      {
+        "text": "Added streaming progress updates to the bulk RFID scanning API.",
+        "flag": "Warehouse-Batch-Scanning"
+      },
+      "Adjusted the new Flex Blue and Dark Mode UIs to make it cleaner and more consistent.",
+      "Adjusted icons across Flex to be more modern and sharper.",
+      "Updated document links in emails to open directly in Flex5.",
+      "Improved error handling for deleted or missing workflow actions."
+    ]
+  },
+  {
     "version": "1.23.2",
     "date": "2026-11-14",
     "notes": [

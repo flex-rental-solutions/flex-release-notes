@@ -1,5 +1,49 @@
 [
   {
+    "version": "1.24.0",
+    "date": "2026-11-19",
+    "notes": [
+      "Added additional items to the Element Audit Trail, including logging for substitutions, StaffingPlus, and moving lines between subtotals.",
+      "Added the ability to create groups on Contact Lists, with their own start/end dates.",
+      "Added a “Warehouse Mute by Default” setting to inventory models, so the item is automatically warehouse muted when added to financial documents.",
+      "Added a Reset Contents option to financial documents and equipment lists, so selected packages can be updated to match their current inventory model contents.",
+      "Added a prompt when deleting equipment list lines that have scan records, giving users the option to undo the scans and delete the lines.",
+      "Added a validation check that prevents deleting a custom report while it’s used in an email workflow job, with the option to replace it in those jobs.",
+      "Added the ability to set a bin location on individual serial units, which defaults to the model’s bin location when left blank.",
+      "Added the ability to edit header fields directly on Serial Unit, Inventory Model, Contact, Service and Location detail pages.",
+      "Added a Response column to the Assignment Dashboard showing contacts’ inquiry and offer responses, with the ability to assign contacts who responded Yes. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> Only)",
+      "Added the ability to cancel availability inquiries. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> Only)",
+      {
+        "text": "Added bulk RFID scanning support for batches of up to 250 tags, with recoverable progress and individual scan results.",
+        "flag": "Warehouse-Batch-Scanning"
+      },
+      {
+        "text": "Added configurable filename templates for report downloads and email attachments.",
+        "flag": "TWR-824"
+      },
+      {
+        "text": "Added <a href=\"https://helpcenter.flexrentalsolutions.com/hc/en-us/articles/45106642625175-Configure-a-Fee-Matrix\" target=\"_blank\" rel=\"noopener noreferrer\">Configure Fee Matrix</a> to set up fee calculations and display them in document totals and reports.",
+        "flag": "FLEX-4164"
+      },
+      {
+        "text": "Added streaming progress updates to the bulk RFID scanning API.",
+        "flag": "Warehouse-Batch-Scanning"
+      },
+      "Adjusted <a href=\"https://helpcenter.flexrentalsolutions.com/hc/en-us/articles/26351015363479-Connecting-Flex-to-PayEngine\" target=\"_blank\" rel=\"noopener noreferrer\">PayEngine Authorizations tab</a> to have more granular distinction between what users have access to see.",
+      "Adjusted PayEngine merchant flow to include existing corporate identity business information for initial financials and moved application entirely inside of Flex. ",
+      "Adjusted the new Flex Blue and Dark Mode UIs to make it cleaner and more consistent.",
+      "Adjusted icons across Flex to be more modern and sharper.",
+      "Adjusted Workflows to require a Workflow State to have an \"Initial State\" selected.",
+      "Adjusted User Access History with performance improvements.",
+      "Adjusted contacts’ “No” responses to add an Unavailable - Declined event to their schedule. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> Only)",
+      "Updated document links in emails to open directly in Flex5.",
+      "Fixed an issue where uploading large files to Remote File List elements failed on slower connections.",
+      "Fixed an issue where updating a Pullsheet through workflow undid substituted lines.",
+      "Fixed an issue where Notes and other new field types didn’t display correctly in Staffing email templates, and added Long/Full Date with Time call fields. (<a href=\"https://www.flexrentalsolutions.com/flex-staffingplus/\" target=\"_blank\" rel=\"noopener noreferrer\">StaffingPlus</a> Only)",
+      "Improved error handling for deleted or missing workflow actions."
+    ]
+  },
+  {
     "version": "1.23.2",
     "date": "2026-11-14",
     "notes": [
