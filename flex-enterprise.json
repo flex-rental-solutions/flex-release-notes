@@ -1,5 +1,24 @@
 [
   {
+    "version": "1.24.2",
+    "date": "2026-11-19",
+    "notes": [
+      {
+        "text": "Fixed availability calculations after partial scans and for completed subrentals.",
+        "flag": "AvailabilityMasterSwitch"
+      },
+      "Fixed issues with zero-quantity lines creating unwanted subrental, backorder, and transfer paperwork."
+    ]
+  },
+  {
+    "version": "1.24.1",
+    "date": "2026-11-19",
+    "notes": [
+      "Fixed issues with custom field values when creating or copying documents, including manifest creation on the first scan.",
+      "Fixed a line loading issue on certain non-financial elements."
+    ]
+  },
+  {
     "version": "1.24.0",
     "date": "2026-11-19",
     "notes": [
