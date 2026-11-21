@@ -8,7 +8,10 @@
         "flag": "AvailabilityMasterSwitch"
       },
       "Fixed issues with zero-quantity lines creating unwanted subrental, backorder, and transfer paperwork.",
-      "Fixed issues that could cause sign-in loops or unexpected sign-outs when using multiple browser tabs, and preserved the intended destination after sign-in."
+      {
+        "text": "Fixed issues that could cause sign-in loops or unexpected sign-outs when using multiple browser tabs, and preserved the intended destination after sign-in.",
+        "editedDate": "2026-11-21"
+      }
     ]
   },
   {
